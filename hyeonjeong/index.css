@@ -1,14 +1,13 @@
 .footer-category-group{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
-.footer-category-group ul{
-    list-style: none;
-}
+/*
 .footer_category_group_g1{
     text-align: center;
     float: left;
 }
+
 .footer_category_group_g1 > div{
     width: 11rem;
     height: 6rem;
@@ -19,6 +18,15 @@
     z-index: 2;
 }
 .footer_category_group_g1 i:hover{
+    color: cornflowerblue;
+}
+*/
+.footer-category{
+    text-align: center;
+    float: left;
+    padding:1rem;
+}
+.footer-category i:hover{
     color: cornflowerblue;
 }
 .footer-category a{
