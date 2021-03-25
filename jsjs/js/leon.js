@@ -27,7 +27,7 @@ var LeonSans = function (t) {
             value: t
         }), 2 & r && "string" != typeof t) for (var a in t) i.d(e, a, function (r) {
             return t[r]
-        }.bind(null, a));
+        }.bind(null, a)); 
         return e
     }, i.n = function (t) {
         var r = t && t.__esModule ? function () {
