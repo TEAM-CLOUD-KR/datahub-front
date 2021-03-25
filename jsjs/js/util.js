@@ -27,7 +27,7 @@ function canvasResize() {
     ctx.scale(pixelRatio, pixelRatio);
 }
 
-function generatePixi(bgcolor) {
+function generatePixi(bgcolor) { 
     renderer = new PIXI.Renderer({
         width: sw,
         height: sh,
