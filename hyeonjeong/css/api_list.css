@@ -7,6 +7,32 @@
 .api-search > input[type='search']{
     width: 70%;
 }
+.wrap{
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.condition{
+    width: 20%;
+    float:left;
+    border-right: 1px solid lightgray;
+}
+.tit{
+    padding: 1rem;
+    text-align: center;
+}
+.list{
+    display: block;
+    overflow-y: scroll;
+    height: 10rem;
+}
+.list ul{
+    list-style: none;
+    padding: 0;
+}
 .api-list{
     list-style: none;
     border: 1px solid lightgray;
@@ -15,6 +41,6 @@
     font-size: 20px;
 }
 .search-result span{
-    text-align: center;
+    color: blue;
 }
 /* justify-content: center; */
