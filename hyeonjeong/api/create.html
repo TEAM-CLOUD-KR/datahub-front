@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-    <!--    font awesome-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!--    CSS Link-->
     <link rel="stylesheet" href="/css/api/create.css">
@@ -73,28 +73,29 @@
                     <div class="input-use-dataset">
                         <div class="sm-tit">사용할 데이터셋</div>
                         <div class="row">
-                            <select multiple="multiple" class="col-5" id="sbOne">
-                                <option value="1">Alpha</option>
-                                <option value="2">Beta</option>
-                                <option value="3">Gamma</option>
-                                <option value="4">Delta</option>
-                                <option value="5">Epsilon</option>
+                            <select multiple="multiple" class="col-4" id="sbOne">
+                                <option>Alpha</option>
+                                <option>Beta</option>
+                                <option>Gamma</option>
+                                <option>Delta</option>
+                                <option>Epsilon</option>
                             </select>
-                            <div class="col-2 align-self-center control-butt">
-                                <input type="button" id="left" value="<" />
-                                <input type="button" id="right" value=">" />
-                                <input type="button" id="leftall" value="<<" />
-                                <input type="button" id="rightall" value=">>" />
+                            <div class="col-4 align-self-center control-butt">
+                                <input type="button" class="btn btn-primary" id="left" value="<" />
+                                <input type="button" class="btn btn-primary" id="right" value=">" />
+                                <input type="button" class="btn btn-primary" id="leftall" value="<<" />
+                                <input type="button" class="btn btn-primary" id="rightall" value=">>" />
 
                             </div>
-                            <select multiple="multiple" class="col-5" id="sbTwo">
-                                <option value="6">Zeta</option>
-                                <option value="7">Eta</option>
+                            <select multiple="multiple" class="col-4" id="sbTwo">
+                                <option>Zeta</option>
+                                <option>Eta</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
+                <!-- API-select-column -->
                 <div class="row select-column">
                     <div class="sm-tit">컬럼 선택</div>
                     <div class="column-list">
@@ -117,7 +118,7 @@
 
                 <!-- API-open_range -->
                 <div class="row">
-                    <div class="input-open-range">
+                    <div class="input-open-range justify-content-start">
                         <div class="sm-tit">공개 범위</div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" value="all">
@@ -137,7 +138,7 @@
                 <!-- API-create_button -->
                 <div class="row">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    <button type="button" class="btn btn-primary create-butt" data-bs-toggle="modal"
                         data-bs-target="#create_check_modal">
                         생성하기
                     </button>
@@ -152,7 +153,7 @@
                                 </div>
 
                                 <div class="modal-body d-flex justify-content-center">
-                                    <div style="color:blue;">이름</div>
+                                    <div class="popup-create-name">이름</div>
                                     을 생성하시겠습니까?
                                 </div>
                                 <div class="modal-footer">
