@@ -18,11 +18,12 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!--    CSS Link-->
-    <link rel="stylesheet" href="/css/api_create.css">
+    <link rel="stylesheet" href="/css/api/create.css">
     <script>
         $(function () {
             function moveToLastItem(target) {
-                $(target).removeAttr('multiple').attr('multiple', 'multiple').prop('selectedIndex', $(target).children().length - 1);
+                $(target).removeAttr('multiple').attr('multiple', 'multiple').prop('selectedIndex', $(target)
+                    .children().length - 1);
             }
 
             function moveItems(origin, dest) {
@@ -79,7 +80,7 @@
                                 <option value="4">Delta</option>
                                 <option value="5">Epsilon</option>
                             </select>
-                            <div class="col-2">
+                            <div class="col-2 align-self-center control-butt">
                                 <input type="button" id="left" value="<" />
                                 <input type="button" id="right" value=">" />
                                 <input type="button" id="leftall" value="<<" />
@@ -94,9 +95,24 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row select-column">
                     <div class="sm-tit">컬럼 선택</div>
-
+                    <div class="column-list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="">
+                                <label for="">날짜</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="">
+                                <label for="">위치</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="">
+                                <label for="">확장자</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- API-open_range -->

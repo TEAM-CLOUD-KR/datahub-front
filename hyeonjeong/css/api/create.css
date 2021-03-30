@@ -1,0 +1,35 @@
+.bg-tit {
+    padding: 0;
+}
+.input-api-name,
+.input-use-dataset,
+.input-open-range{
+    padding: 0;
+}
+
+.sm-tit {
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+.input-use-dataset .row{
+    --bs-gutter-x: none;
+}
+.control-butt{
+    text-align: center;
+}
+.select-column{
+    --bs-gutter-x: none;
+}
+ul{
+    list-style: none;
+}
+.select-column .column-list{
+    border:1px solid lightgray
+}
+.select-column .column-list{
+    display: block;
+    overflow-y: scroll;
+    height: 5rem;
+    margin-left: 1rem;
+}
