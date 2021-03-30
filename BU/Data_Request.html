@@ -18,26 +18,16 @@
         }
     </style>
     <script>
- 
-  function Request() {
+        function Request() {
 
-    var title = document.getElementById('title');
-      
-      if(document.title.value=""){
-     Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Something went wrong!',
-  footer: '<a href>Why do I have this issue?</a>'});
-      return false;
-      };
-      else return true;
-      
 
-      
-      };
-        
-        
+            Swal.fire({
+                icon: 'error',
+                title: '안돼용',
+                text: '빈칸을 다 입력해주세요',
+                footer: '<a href="index.html">홈으로</a>'
+            });
+        };
     </script>
 
 </head>
@@ -52,34 +42,31 @@
                     <h2>요청하기</h2>
                 </span>
                 <hr>
-                <form action="DataSet.html" method="post" onsubmit="return Request();">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="fs-4">제목</th>
-                            <td>
-                                <input type="text" class="form-control title" placeholder="제목을 입력해주세요">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="fs-4">요청자</th>
-                            <td>
-                                <input type="text" class="form-control" placeholder=""
-                                 style="width: 25%">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="fs-4">내용</th>
-                            <td> <textarea name="" id="" class="form-control" cols="" rows="5" style="resize: none;" maxlength="4000" placeholder="내용을 입력해주세요"></textarea></td>
-                           
-                        </tr>
-                    </thead>
-                </table>
+                <div class="col-12 d-flex">
+                    <div class="col-3 fs-4">제목</div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" placeholder="제목을 입력해주세요">
+                    </div>
+                </div>
+                <hr>
+                <div class="col-12 d-flex">
+                    <div class="col-3 fs-4">요청자</div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" placeholder="" style="width:35%">
+                    </div>
+                </div>
+                <hr>
+                <div class="col-12 d-flex">
+                    <div class="col-3 fs-4">내용</div>
+                    <div class="col-9">
+                        <textarea class="form-control" cols="" rows="5" style="resize: none;" placeholder="내용을 입력해주세요"></textarea>
+                    </div>
+                </div>
+                <hr>
                 <div class="d-flex justify-content-end">
                     <a href="index.html" class="btn btn-secondary me-3">취소하기</a>
-                    <input type="submit" class="btn btn-secondary" value="요청하기" onclick="Request()">
+                    <a href="#" class="btn btn-secondary" onclick="Request()">요청하기</a>
                 </div>
-                </form>
             </div>
         </div>
     </div>
