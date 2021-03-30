@@ -1,0 +1,13 @@
+.bg-tit {
+    padding: 0;
+}
+.input-api-name,
+.input-use-dataset,
+.input-open-range{
+    padding: 0;
+}
+
+.sm-tit {
+    margin-top: 5%;
+    font-weight: bold;
+}
