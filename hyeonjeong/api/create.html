@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -19,43 +19,14 @@
 
     <!--    CSS Link-->
     <link rel="stylesheet" href="/css/api/create.css">
-    <script>
-        $(function () {
-            function moveToLastItem(target) {
-                $(target).removeAttr('multiple').attr('multiple', 'multiple').prop('selectedIndex', $(target)
-                    .children().length - 1);
-            }
 
-            function moveItems(origin, dest) {
-                $(origin).find(':selected').appendTo(dest);
-                moveToLastItem(dest);
-            }
+    <!-- Java Script Link -->
+    <script src="/js/api/create.js"></script>
 
-            function moveAllItems(origin, dest) {
-                $(origin).children().appendTo(dest);
-                moveToLastItem(dest);
-            }
-
-            $('#left').click(function () {
-                moveItems('#sbTwo', '#sbOne');
-            });
-
-            $('#right').on('click', function () {
-                moveItems('#sbOne', '#sbTwo');
-            });
-
-            $('#leftall').on('click', function () {
-                moveAllItems('#sbTwo', '#sbOne');
-            });
-
-            $('#rightall').on('click', function () {
-                moveAllItems('#sbOne', '#sbTwo');
-            });
-        });
-    </script>
 </head>
 
 <body>
+    <div th:replace="layout/header :: header"></div>
     <div class="container">
         <div class="row">
             <div class="col-10 mx-auto">
