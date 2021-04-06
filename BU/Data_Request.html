@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>데이터셋</title>
-    
-    
- <meta name="viewport"
+
+
+    <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    BootStrap-->
@@ -19,8 +19,19 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <link rel="stylesheet" href="css/DataSet.css">
-    
+    <style>
+        ol, ul, dl, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a, a:link, a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -30,18 +41,14 @@
         <div class="col-10">
             <h2>데이터 요청</h2><br>
             <div class="main">
-                <a href="#" class="fas fa-search fa-2x"></a>
-                <div class="search">
-                    <input type="text" id="keyword" class="form-control" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요"
+                <div class="search mb-5 d-flex justify-content-end">
+                    <input type="text" id="keyword" class="form-control w-25 me-2" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요"
                            autocomplete="off">
+                    <a href="#" class="fas fa-search fa-2x text-primary align-self-center"></a>
                 </div>
-                <br><br>
 
-                <div class="list">
-
-                    전체&nbsp;
-                    <strong>1</strong>건
-
+                <div class="d-flex justify-content-between">
+                    <h5 class="align-self-center mb-0">전체 1건</h5>
                     <div class="list_right">
                         <button type="button" class="btn btn-secondary">등록일 순</button>
                         <button type="button" class="btn btn-secondary">조회수 순</button>
