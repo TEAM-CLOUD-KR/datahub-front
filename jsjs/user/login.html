@@ -15,19 +15,6 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!--    CSS Link-->
-    <link rel="stylesheet" href="css/login-register.css">
-    <style>
-        @media screen and (max-width: 768px) {
-            .alert-secondary {
-            /*    top: 0px;*/
-            /*    !*height: 100vh;*!*/
-            /*}*/
-        }
-
-
-
-    </style>
 </head>
 <body>
 <div th:replace="fragments/header.html :: fragment-header"></div>
@@ -35,37 +22,30 @@
     <div class="row">
         <div class="col-12 col-lg-6 mx-auto">
             <div class="alert alert-secondary" role="alert">
-                <h2>로그인</h2>
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary facebook_btn" type="button"><i class="fab fa-facebook-square" style="margin-right: 10px;"></i>페이스북로그인
+                <h2 class="text-center">로그인</h2>
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-primary" type="button"><i class="fab fa-facebook-square me-2"></i>페이스북로그인
                     </button>
                 </div>
-                <div class="main">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input type="text" class="form-control" placeholder="이메일" aria-label="Username">
-                        <span class="input-group-text">@</span>
-                        <input type="text" class="form-control" placeholder="datahub.com" aria-label="Server">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username"
-                               aria-describedby="basic-addon1">
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-outline-success">로그인</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">홈으로</button>
-                    </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="이메일" aria-label="Username">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" placeholder="datahub.com" aria-label="Server">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-outline-success">로그인</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">홈으로
+                    </button>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
-<footer>
-
-</footer>
 </body>
 </html>
