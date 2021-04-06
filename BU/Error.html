@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <style>
-        * {
-            justify-content: center;
-        }
+
 
         ol, ul, dl, li {
             list-style: none;
@@ -37,14 +35,14 @@
     <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
         <div class="row">
-            <div class="col-10">
+            <div class="col-10 mx-auto">
                 <span>
-                    <h3>오류 문의</h3>
+                    <h3 class="mb-5">오류 문의</h3>
                 </span>
-                <hr>
-                <div class="col-12 d-flex">
-                    <div class="col-3 fs-4">1. 대분류</div>
-                    <div class="col-9">
+                
+                <div class="row mb-3">
+                    <div class="col-3">대분류</div>
+                    <div class="col-lg-9 col-sm-12">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>선택해주세요</option>
                             <option value="1">버그</option>
@@ -53,10 +51,9 @@
                         </select>
                     </div>
                 </div>
-                <hr>
-                <div class="col-12 d-flex">
-                    <div class="col-3 fs-4">2. 소분류</div>
-                    <div class="col-9">
+                <div class="row mb-3">
+                    <div class="col-3">소분류</div>
+                    <div class="col-lg-9 col-sm-12">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>선택해주세요</option>
                             <option value="1">API</option>
@@ -66,17 +63,18 @@
                         </select>
                     </div>
                 </div>
-                <hr>
-                <div class="col-12 d-flex">
-                    <div class="col-3 fs-4">3. 내용</div>
-                    <div class="col-9">
-                        <textarea class="form-control" cols="" rows="5" style="resize: none;" placeholder="내용을 입력해주세요"></textarea>
+                <div class="row mb-3">
+                    <div class="col-3">내용</div>
+                    <div class="col-lg-9 col-sm-12">
+                       <textarea class="form-control" cols="" rows="5" style="resize: none;"
+                              placeholder="내용을 입력해주세요"></textarea>
                     </div>
                 </div>
-                <hr>
-                <div class="col-12 d-flex">
+                <div class="row">
+                   <div class="d-flex justify-content-end">
                     <button type="button" class="btn btn-outline-secondary me-2">등록하기</button>
                     <button type="button" class="btn btn-outline-secondary">취소하기</button>
+                    </div>
                 </div>
             </div>
         </div>
