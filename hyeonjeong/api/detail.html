@@ -2,10 +2,12 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <title>Document</title>
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -18,6 +20,25 @@
 
     <!--    CSS Link-->
     <link rel="stylesheet" href="/css/api/detail.css">
+
+    <style>
+        ol,
+        ul,
+        dl,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -26,19 +47,19 @@
         <div class="row">
             <div class="col-10 mx-auto">
                 <!-- API-detail-page-big-title -->
-                <h4 class="fw-bold big-tit">| API 상세 조회 |</h4>
+                <h2>API 상세 조회</h2>
 
                 <!-- API-detail-API-name -->
-                <div class="card">
-                    <div class="card-header fw-bold">API 이름</div>
+                <div class="card mt-5">
+                    <h4 class="card-header">API 이름</h4>
                     <div class="card-body">-</div>
                 </div>
 
                 <!-- API-detail-API-detail-info -->
-                <div class="card">
-                    <div class="card-header fw-bold">
+                <div class="card mt-5">
+                    <h4 class="card-header">
                         API 상세 정보
-                    </div>
+                    </h4>
                     <div class="card-body">
                         <div class="d-flex flex-row">
                             <div class="fw-bold d-flex-auto col-2">요약</div>
@@ -66,7 +87,7 @@
                 </div>
 
                 <!-- API-detail-API-backbutt -->
-                <div class="d-grid gap-2 col-6 mx-auto">
+                <div class="d-grid gap-2 col-6 mx-auto mt-5 text-light">
                     <button type="button" class="btn btn-primary">목록으로</button>
                 </div>
             </div>
