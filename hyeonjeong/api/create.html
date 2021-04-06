@@ -2,10 +2,12 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <title>Document</title>
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -17,59 +19,66 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
 
-    <!--    CSS Link-->
-    <link rel="stylesheet" href="/css/api/create.css">
-
     <!-- Java Script Link -->
     <script src="/js/api/create.js"></script>
+
+    <style>
+        ol,
+        ul,
+        dl,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .select-column .column-list {
+            display: block;
+            overflow-y: scroll;
+            height: 5rem;
+        }
+    </style>
 
 </head>
 
 <body>
     <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
-        <div class="row">
+        <div class="row gx-0">
             <div class="col-10 mx-auto">
                 <!-- API-name -->
-                <div class="row">
-                    <h2>API 생성</h2>
-                    <div class="input-api-name">
-                        <div class="sm-tit">API 이름</div>
-                        <input type="text" class="form-control" placeholder="생성할 API의 이름을 입력해주세요!">
-                    </div>
+                <h2>API 생성</h2>
+                <div class="input-api-name gx-0 mt-5">
+                    <h4>API 이름</h4>
+                    <input type="text" class="form-control" placeholder="생성할 API의 이름을 입력해주세요!">
                 </div>
 
                 <!-- API-use_dataset -->
-                <div class="row">
-                    <div class="input-use-dataset">
-                        <div class="sm-tit">사용할 데이터셋</div>
-                        <div class="row">
-                            <select multiple="multiple" class="col-4" id="sbOne">
-                                <option>Alpha</option>
-                                <option>Beta</option>
-                                <option>Gamma</option>
-                                <option>Delta</option>
-                                <option>Epsilon</option>
-                            </select>
-                            <div class="col-4 align-self-center control-butt">
-                                <input type="button" class="btn btn-primary" id="left" value="<" />
-                                <input type="button" class="btn btn-primary" id="right" value=">" />
-                                <input type="button" class="btn btn-primary" id="leftall" value="<<" />
-                                <input type="button" class="btn btn-primary" id="rightall" value=">>" />
-
-                            </div>
-                            <select multiple="multiple" class="col-4" id="sbTwo">
-                                <option>Zeta</option>
-                                <option>Eta</option>
-                            </select>
-                        </div>
+                <div class="row gx-0 mt-5 justify-content-evenly">
+                    <h4>사용할 데이터셋</h4>
+                    <select multiple="multiple" class="col-4" id="sbOne">
+                        <option>Alpha</option>
+                        <option>Beta</option>
+                        <option>Gamma</option>
+                        <option>Delta</option>
+                        <option>Epsilon</option>
+                    </select>
+                    <div class="col-4 align-self-center d-flex justify-content-center justify-content-evenly">
+                        <input type="button" class="btn btn-primary" id="left" value="<" />
+                        <input type="button" class="btn btn-primary" id="right" value=">" />
+                        <input type="button" class="btn btn-primary" id="leftall" value="<<" />
+                        <input type="button" class="btn btn-primary" id="rightall" value=">>" />
                     </div>
+                    <select multiple="multiple" class="col-4" id="sbTwo">
+                        <option>Zeta</option>
+                        <option>Eta</option>
+                    </select>
                 </div>
 
                 <!-- API-select-column -->
-                <div class="row select-column">
-                    <div class="sm-tit">컬럼 선택</div>
-                    <div class="column-list">
+                <div class="select-column gx-0 mt-5">
+                    <h4>컬럼 선택</h4>
+                    <div class="column-list border">
                         <ul>
                             <li>
                                 <input type="checkbox" value="">
@@ -83,31 +92,33 @@
                                 <input type="checkbox" value="">
                                 <label for="">확장자</label>
                             </li>
+                            <li>
+                                <input type="checkbox" value="">
+                                <label for="">등등</label>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- API-open_range -->
-                <div class="row">
-                    <div class="input-open-range justify-content-start">
-                        <div class="sm-tit">공개 범위</div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="all">
-                            <label class="form-check-label">전체공개</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="private">
-                            <label class="form-check-label">비공개</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="datahub">
-                            <label class="form-check-label">데이터허브</label>
-                        </div>
+                <div class="input-open-range justify-content-start gx-0 mt-5">
+                    <h4>공개 범위</h4>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" value="all">
+                        <label class="form-check-label">전체공개</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" value="private">
+                        <label class="form-check-label">비공개</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" value="datahub">
+                        <label class="form-check-label">데이터허브</label>
                     </div>
                 </div>
 
                 <!-- API-create_button -->
-                <div class="row">
+                <div class="row gx-0 mt-5">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#create_check_modal">
