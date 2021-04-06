@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Data-Hub</title>
-
-
+<head th:fragment="head">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -19,20 +17,8 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.js"></script>
 </head>
-<body class="vh-100">
-<div th:replace="fragments/header.html :: fragment-header"></div>
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-lg-10 mx-auto">
-            <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="검색할 데이터 입력!" aria-label="Username"
-                       aria-describedby="addon-wrapping">
-                <button type="button" class="btn btn-primary"><i class="fas fa-search fa-2x"></i></button>
-            </div>
-
-        </div>
-    </div>
-</div>
-</body>
 </html>
