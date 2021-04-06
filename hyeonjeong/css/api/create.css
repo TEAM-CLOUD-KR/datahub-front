@@ -1,7 +1,4 @@
 /* common */
-.bg-tit {
-    padding: 0;
-}
 
 .input-api-name,
 .input-use-dataset,
@@ -40,11 +37,3 @@ ul {
     padding-left: 0;
 }
 
-/* API-create_button */
-.create-butt {
-    margin-top: 4rem;
-}
-
-.popup-create-name {
-    color: blue;
-}
