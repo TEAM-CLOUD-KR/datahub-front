@@ -32,10 +32,10 @@
             margin: 0;
         }
 
-        .select-column .column-list {
+        .select-column .check-list {
             display: block;
             overflow-y: scroll;
-            height: 5rem;
+            height: 10rem;
         }
     </style>
 
@@ -54,49 +54,106 @@
                 </div>
 
                 <!-- API-use_dataset -->
-                <div class="row gx-0 mt-5 justify-content-evenly">
-                    <h4>사용할 데이터셋</h4>
-                    <select multiple="multiple" class="col-4" id="sbOne">
-                        <option>Alpha</option>
-                        <option>Beta</option>
-                        <option>Gamma</option>
-                        <option>Delta</option>
-                        <option>Epsilon</option>
-                    </select>
-                    <div class="col-4 align-self-center d-flex justify-content-center justify-content-evenly">
-                        <input type="button" class="btn btn-primary" id="left" value="<" />
-                        <input type="button" class="btn btn-primary" id="right" value=">" />
-                        <input type="button" class="btn btn-primary" id="leftall" value="<<" />
-                        <input type="button" class="btn btn-primary" id="rightall" value=">>" />
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <h4>사용할 데이터셋</h4>
+                        <div class="select-column gx-0">
+                            <div class="check-list border mr-auto p-2">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름1</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름2</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름3</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름4</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름5</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름6</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름7</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름8</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름9</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">데이터 이름10</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <select multiple="multiple" class="col-4" id="sbTwo">
-                        <option>Zeta</option>
-                        <option>Eta</option>
-                    </select>
-                </div>
 
-                <!-- API-select-column -->
-                <div class="select-column gx-0 mt-5">
-                    <h4>컬럼 선택</h4>
-                    <div class="column-list border">
-                        <ul>
-                            <li>
-                                <input type="checkbox" value="">
-                                <label for="">날짜</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" value="">
-                                <label for="">위치</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" value="">
-                                <label for="">확장자</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" value="">
-                                <label for="">등등</label>
-                            </li>
-                        </ul>
+                    <!-- API-select-column -->
+                    <div class="col-6">
+                        <h4>컬럼 선택</h4>
+                        <div class="select-column gx-0">
+                            <div class="check-list border mr-auto p-2">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼1</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼2</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼3</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼4</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼5</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼6</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼7</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼8</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼9</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label for="">컬럼10</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
