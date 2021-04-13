@@ -48,8 +48,9 @@
             <!-- API-request-result list header -->
             <div class="row h5 pb-1 mt-5 border-bottom text-center border-primary">
                 <div class="col-1">번호</div>
-                <div class="col-7">API 이름</div>
+                <div class="col-5">API 이름</div>
                 <div class="col-2">작성자</div>
+                <div class="col-2">신청일</div>
                 <div class="col-2">비고</div>
             </div>
 
@@ -57,41 +58,44 @@
             <ul>
                 <li class="row h6 pb-2 text-center d-flex align-items-center border-bottom">
                     <div class="col-1">1</div>
-                    <div class="col-7">영남이공대학교 입학생(2000~2021)</div>
+                    <div class="col-5">영남이공대학교 입학생(2000~2021)</div>
                     <div class="col-2">이현정</div>
+                    <div class="col-2">2021-04-01</div>
                     <div class="col-2">
-                        <button type="button" class="btn btn-outline-success btn-sm">수정</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
+                        <button type="button" class="btn btn-outline-success btn-sm"><a href="">수정</a></button>
+                        <button type="button" class="btn btn-outline-danger btn-sm"><a href="">삭제</a></button>
                     </div>
                 </li>
                 <li class="row h6 pb-2 text-center d-flex align-items-center border-bottom">
                     <div class="col-1">2</div>
-                    <div class="col-7">영남이공대학교 졸업생(2000~2021)</div>
+                    <div class="col-5">영남이공대학교 졸업생(2000~2021)</div>
                     <div class="col-2">이현정</div>
+                    <div class="col-2">2021-04-01</div>
                     <div class="col-2">
-                        <button type="button" class="btn btn-outline-success btn-sm">수정</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
+                        <button type="button" class="btn btn-outline-success btn-sm"><a href="">수정</a></button>
+                        <button type="button" class="btn btn-outline-danger btn-sm"><a href="">삭제</a></button>
                     </div>
                 </li>
             </ul>
 
+
             <!-- API-request-result list pagination -->
-            <nav class="mt-5" aria-label="Page navigation example">
+            <nav class="mt-5" id="demo" aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <i class="fas fa-arrow-circle-left"></i>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </li>
                 </ul>
-              </nav>
+            </nav>
         </div>
     </div>
 </body>
