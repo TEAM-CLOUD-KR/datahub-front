@@ -45,14 +45,17 @@
         <div class="col-10 mx-auto">
             <h2>API 활용 신청 목록</h2>
 
-            <div class="row mt-5 border-bottom text-center border-primary">
+            <!-- API-request-result list header -->
+            <div class="row h5 pb-1 mt-5 border-bottom text-center border-primary">
                 <div class="col-1">번호</div>
                 <div class="col-7">API 이름</div>
                 <div class="col-2">작성자</div>
                 <div class="col-2">비고</div>
             </div>
+
+            <!-- API-request-result list -->
             <ul>
-                <li class="row text-center d-flex align-items-center pt-1 pb-1 border-bottom">
+                <li class="row h6 pb-2 text-center d-flex align-items-center border-bottom">
                     <div class="col-1">1</div>
                     <div class="col-7">영남이공대학교 입학생(2000~2021)</div>
                     <div class="col-2">이현정</div>
@@ -61,7 +64,7 @@
                         <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
                     </div>
                 </li>
-                <li class="row text-center d-flex align-items-center pt-1 pb-1 border-bottom">
+                <li class="row h6 pb-2 text-center d-flex align-items-center border-bottom">
                     <div class="col-1">2</div>
                     <div class="col-7">영남이공대학교 졸업생(2000~2021)</div>
                     <div class="col-2">이현정</div>
@@ -72,7 +75,23 @@
                 </li>
             </ul>
 
-
+            <!-- API-request-result list pagination -->
+            <nav class="mt-5" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
         </div>
     </div>
 </body>
