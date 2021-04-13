@@ -18,18 +18,26 @@
     <script>
         window.onload = () => {
             const btnLogin = document.getElementById('btn-login');
+            const textUsername = document.getElementById('text-username');
+            const textDomain = document.getElementById('text-domain');
+            const textPassword = document.getElementById('text-password');
             btnLogin.addEventListener('click', () => {
                 // 입력 폼 유효성 검사
                 const xhr = new XMLHttpRequest();
                 const data = {
-                    email: 'a',
-                    password: 'b',
+                    email: textUsername.value + '@' + textDomain.value,
+                    password: textPassword.value,
                 };
-                xhr.onload = function() {
+                xhr.onload = function () {
+                    const result = JSON.parse(xhr.responseText);
                     if (xhr.status === 200 || xhr.status === 201) {
-                        console.log(xhr.responseText);
+                        // 오류 없음(성공)
+                        console.log(result);
+                        alert(result.data);
                     } else {
-                        console.error(xhr.responseText);
+                        // 오류
+                        console.error(result);
+                        alert(result.data);
                     }
                 };
                 xhr.open('POST', 'https://api.dataportal.kr/user/signin');
@@ -52,13 +60,14 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="text" class="form-control" placeholder="이메일" aria-label="Username">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                           id="text-username">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" placeholder="datahub.com" aria-label="Server">
+                    <input type="text" class="form-control" placeholder="Domain" aria-label="Domain" id="text-domain">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username"
+                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Password" id="text-password"
                            aria-describedby="basic-addon1">
                 </div>
                 <div class="d-grid gap-2">
