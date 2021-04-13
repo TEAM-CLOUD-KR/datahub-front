@@ -15,35 +15,77 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --blue: #8DB4D8;
+        }
+
+        .login_alert {
+            border: solid 1px black;
+        .
+        }
+
+        .login_btn {
+            background-color: var(--blue);
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const btnLogin = document.getElementById('btn-login');
+            const textUsername = document.getElementById('text-username');
+            // const textDomain = document.getElementById('text-domain');
+            const textPassword = document.getElementById('text-password');
+            btnLogin.addEventListener('click', () => {
+                // 입력 폼 유효성 검사
+                const xhr = new XMLHttpRequest();
+                const data = {
+                    email: textUsername.value,
+                    password: textPassword.value,
+                };
+                xhr.onload = function () {
+                    const result = JSON.parse(xhr.responseText);
+                    if (xhr.status === 200 || xhr.status === 201) {
+                        // 오류 없음(성공)
+                        console.log(result);
+                        alert(result.data);
+                    } else {
+                        // 오류
+                        console.error(result);
+                        alert(result.data);
+                    }
+                };
+                xhr.open('POST', 'https://api.dataportal.kr/user/signin');
+                xhr.setRequestHeader('Content-Type', 'application/json'); // 컨텐츠타입을 json으로
+                xhr.send(JSON.stringify(data)); // 데이터를 stringify해서 보냄
+            });
+        };
+    </script>
 </head>
 <body>
 <div th:replace="fragments/header.html :: fragment-header"></div>
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-6 mx-auto">
-            <div class="alert alert-secondary" role="alert">
-                <h2 class="text-center">로그인</h2>
-                <div class="d-grid gap-2 mb-3">
-                    <button class="btn btn-primary" type="button"><i class="fab fa-facebook-square me-2"></i>페이스북로그인
-                    </button>
+        <div class="col-12 col-lg-4 mx-auto">
+            <div class="alert login_alert" role="alert" style="background-color:var(--white);">
+                <h3 class="text-center"><i class="fas fa-sign-in-alt me-3"></i>로그인</h3>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="이메일"
+                           aria-describedby="basic-addon1" id="text-username">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="text" class="form-control" placeholder="이메일" aria-label="Username">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" placeholder="datahub.com" aria-label="Server">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username"
+                    <span class="input-group-text" id="text-password"><i class="fas fa-key"></i></span>
+                    <input type="password" class="form-control" placeholder="비밀번호"
                            aria-describedby="basic-addon1">
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-success">로그인</button>
-                    <button type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">홈으로
-                    </button>
+                    <button type="button" class="btn login_btn" id="btn-login">ENTER</button>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
