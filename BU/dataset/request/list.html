@@ -36,11 +36,11 @@
 
 <body>
 <div th:replace="fragments/header.html :: fragment-header"></div>
-<div class="container">
+<div class="container mx-auto">
     <div class="row">
-        <div class="col-10">
+        <div class="col-10 mx-auto">
             <h2>데이터 요청</h2><br>
-            <div class="main">
+            <div class="col-12">
                 <div class="search mb-5 d-flex justify-content-end">
                     <input type="text" id="keyword" class="form-control w-25 me-2" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요"
                            autocomplete="off">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <br><br>
-                <div class="center">
+                <div class="col-12 d-flex">
                     <table class="table table-hover">
                         <thead>
                         <tr>
@@ -77,10 +77,10 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="click_right">
-                        <a href="action.html" class="btn btn-secondary">요청하기</a>
-                    </div>
                 </div>
+                 <div class="d-flex justify-content-end">
+                         <button type="button" class="btn btn-secondary" onclick="location.href='action.html'">요청하기</button>
+                    </div>
             </div>
         </div>
     </div>

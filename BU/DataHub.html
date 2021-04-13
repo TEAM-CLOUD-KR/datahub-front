@@ -13,27 +13,196 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script>
+        $(document).ready(function() {
+            $('.responsive').slick({
+                dots: true,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+    </script>
 
     <style>
-        ol, ul, dl, li {
+        ol,
+        ul,
+        dl,
+        li {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        a, a:link, a:visited {
+        a,
+        a:link,
+        a:visited {
             text-decoration: none;
             color: inherit;
         }
     </style>
 
+
 </head>
 
 <body>
     <div th:replace="fragments/header.html :: fragment-header"></div>
-    <div class="container">
+    <div class="container mx-auto">
         <div class="row">
-            <div class="col-10"></div>
+            <div class="col-10 mx-auto">
+                <div class="search mb-5 d-flex justify-content-end">
+                    <input type="text" id="keyword" class="form-control w-25 me-2" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요" autocomplete="off">
+                    <a href="#" class="fas fa-search fa-2x text-primary align-self-center"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-10 mx-auto">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active d-flex">
+                            <img src="image/1.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+
+                            <img src="image/1.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                            <img src="image/1.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                        </div>
+                        <div class="carousel-item d-flex">
+                            <img src="image/2.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                            <img src="image/2.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                            <img src="image/2.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                        </div>
+                        <div class="carousel-item d-flex">
+                            <img src="image/3.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                            <img src="image/3.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                            <img src="image/3.PNG" class="d-block w-100 m-3" alt="..." style="height: 250px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-10 mx-auto">
+                <div class="col-12 d-flex justify-content-center">
+                    <span>추천 데이터 HUB</span>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <ul class="d-flex">
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <ul class="d-flex">
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="m-3">
+                                <a href="#" class="border d-flex rounded-3 p-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="image/1.PNG" alt="" class="m-3">
+                                    </div>
+                                    <div>
+                                        <strong>지섭이</strong>
+                                        <p>지섭이의 점심메뉴는?</p>
+                                        <div>
+                                            <span>#한솥</span>
+                                            <span>#토마토</span>
+                                            <span>#편의점</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body></html>
