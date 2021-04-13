@@ -15,6 +15,29 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script>
+        window.onload = () => {
+            const btnLogin = document.getElementById('btn-login');
+            btnLogin.addEventListener('click', () => {
+                // 입력 폼 유효성 검사
+                const xhr = new XMLHttpRequest();
+                const data = {
+                    email: 'a',
+                    password: 'b',
+                };
+                xhr.onload = function() {
+                    if (xhr.status === 200 || xhr.status === 201) {
+                        console.log(xhr.responseText);
+                    } else {
+                        console.error(xhr.responseText);
+                    }
+                };
+                xhr.open('POST', 'https://api.dataportal.kr/user/signin');
+                xhr.setRequestHeader('Content-Type', 'application/json'); // 컨텐츠타입을 json으로
+                xhr.send(JSON.stringify(data)); // 데이터를 stringify해서 보냄
+            });
+        };
+    </script>
 </head>
 <body>
 <div th:replace="fragments/header.html :: fragment-header"></div>
@@ -39,7 +62,7 @@
                            aria-describedby="basic-addon1">
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-success">로그인</button>
+                    <button type="button" class="btn btn-outline-success" id="btn-login">로그인</button>
                     <button type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">홈으로
                     </button>
                 </div>
