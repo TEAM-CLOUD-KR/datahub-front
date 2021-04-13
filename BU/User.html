@@ -35,16 +35,11 @@
     <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
         <div class="row">
-            <div class="col-10 mx-auto">
-               <div class="">
-                <span>
+            <div class="col-10 col-lg-7 mx-auto">
                     <h3 class="mb-5">이용 문의</h3>
-                </span>
+                <h5>분류</h5>
                 <div class="row mb-3">
-                <div class="col-3">분류</div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-lg-2 col-sm-12">
+                    <div class="col-12 col-lg-2">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>대분류</option>
                             <option value="1">버그</option>
@@ -52,7 +47,7 @@
                             <option value="3">기타</option>
                         </select>
                     </div>
-                    <div class="col-lg-2 col-sm-12">
+                    <div class="col-12 col-lg-2">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>소분류</option>
                             <option value="1">API</option>
@@ -63,25 +58,24 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-9 col-sm-12">
-                       <span>제목</span>
+                   <h5>제목</h5>
+                    <div class="col-12">
                         <input type="text" class="form-control">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-9 col-sm-12">
-                      <span>내용</span>
+                   <h5>내용</h5>
+                    <div class="col-12">
                        <textarea class="form-control" cols="" rows="5" style="resize: none;"
                               placeholder="내용을 입력해주세요"></textarea>
                     </div>
                 </div>
                 <div class="row">
-                   <div class="col-lg-9 col-sm-12 d-flex justify-content-end">
+                   <div class="col-12 d-flex justify-content-end">
                     <button type="button" class="btn btn-outline-secondary me-2">등록하기</button>
                     <button type="button" class="btn btn-outline-secondary">취소하기</button>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
