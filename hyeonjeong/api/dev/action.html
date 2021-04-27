@@ -19,6 +19,23 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        ol,
+        ul,
+        dl,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,12 +45,17 @@
             <h2>API 활용 신청</h2>
 
             <div class="row mt-5">
+                <!-- 사용자가 API 상세 페이지에서 구경하다가 사용하고 싶으면 활용 신청하러 오는 경로 -->
                 <h4 class="col-3">활용할 API 이름</h4>
-                <div class="col-9">-</div>
+                <div class="col-9"></div>
             </div>
-            
 
             <textarea class="col-12 mt-5" placeholder="신청하실 API를 무슨 목적으로 사용하는지 적어주세요!"></textarea>
+
+            <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success btn-sm justify-content-center mx-1"><a href="list.html">신청하기</a></button>
+                <button type="button" class="btn btn-danger btn-sm justify-content-center mx-1"><a href="">취소</a></button>
+            </div>
 
         </div>
     </div>
