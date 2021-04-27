@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data-Hub 로그인</title>
+    <title>Data-Hub 회원가입</title>
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -19,57 +19,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.js"></script>
-
     <style>
         :root {
             --white: #FFFFFF;
             --blue: #8DB4D8;
             --red: #EF857F;
         }
+
         .login_btn {
             background-color: var(--blue);
             font-weight: bold;
             color: white !important;
         }
-        .login_bottom{
+
+        .login_bottom {
             margin-bottom: 200px;
         }
     </style>
-    <script>
-        window.onload = () => {
-            const btnLogin = document.getElementById('btn-login');
-            const textUsername = document.getElementById('text-username');
-            // const textDomain = document.getElementById('text-domain');
-            const textPassword = document.getElementById('text-password');
-            btnLogin.addEventListener('click', () => {
-                // 입력 폼 유효성 검사
-                const xhr = new XMLHttpRequest();
-                const data = {
-                    // email: textUsername.value + '@' + textDomain.value,
-                    email: textUsername.value,
-                    password: textPassword.value,
-                };
-                xhr.onload = function () {
-                    const result = JSON.parse(xhr.responseText);
-                    if (xhr.status === 200 || xhr.status === 201) {
-                        // 오류 없음(성공)
-                        console.log(result);
-                        alert(result.data);
-                    } else {
-                        // 오류
-                        console.error(result);
-                        alert(result.data);
-                    }
-                };
-                xhr.open('POST', 'https://api.dataportal.kr/user/signin');
-                xhr.setRequestHeader('Content-Type', 'application/json'); // 컨텐츠타입을 json으로
-                xhr.send(JSON.stringify(data)); // 데이터를 stringify해서 보냄
-            });
-        };
-    </script>
 </head>
 <body>
-<!--<div th:replace="fragments/header.html :: fragment-header"></div>-->
+<div th:replace="fragments/header.html :: fragment-header"></div>
 <div class="container">
     <div class="row" style="height: 100vh">
         <div class="col-12 align-self-center">
@@ -82,31 +51,29 @@
                         </a>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                        <input type="text" class="form-control" placeholder="이메일"
-                               aria-describedby="basic-addon1" id="text-username">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="이메일">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" placeholder="datahub.com">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        <input type="password" class="form-control" placeholder="비밀번호"
-                               aria-describedby="basic-addon1" id="text-password">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="닉네임"
+                               aria-describedby="basic-addon1">
                     </div>
-                    <div class="d-grid gap-2 mb-3">
-                        <button type="button" class="btn login_btn" id="btn-login">ENTER</button>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="비밀번호"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="비밀번호재확인"
+                               aria-describedby="basic-addon1">
                     </div>
                     <hr>
-                    <div class="d-grid justify-content-center mb-5">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">회원가입</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">아이디 찾기</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">비밀번호 찾기</a>
-                            </li>
-                        </ul>
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="button" class="btn login_btn" id="btn-login">SIGNUP</button>
                     </div>
                 </div>
             </div>
