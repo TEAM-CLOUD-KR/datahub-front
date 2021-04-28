@@ -43,45 +43,141 @@
     <div class="container">
         <div class="row">
             <div class="col-10 mx-auto">
-                <!-- API-detail-page-big-title -->
+                <!-- API-view-page-big-title -->
                 <h2>API 상세 조회</h2>
 
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-success"><a href="dev/action.html">활용신청</a></button>
-                </div>
 
-                <!-- API-detail-API-name -->
-                <div class="card mt-2">
-                    <h4 class="card-header">API 이름</h4>
-                    <div class="card-body">충청북도_동물위생시험소 전염성해면상뇌증현황</div>
-                </div>
 
-                <!-- API-detail-API-detail-info -->
-                <div class="card mt-5">
-                    <h4 class="card-header">
-                        API 조회 정보
-                    </h4>
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">API이름</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">충청북도_동물위생시험소 전염성해면상뇌증현황</h6>
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">분류</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">농림 - 농업·농촌</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">등록일</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">2021-03-01</h6>
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">갱신일</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">2021-04-01</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">제공기관</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">-</h6>
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">담당부서</h6>
-                            <h6 class="card-text col-12 col-md-5 d-flex align-items-center">-</h6>
-                        </div>
+                <!-- 수정본 -->
+                <div class="row mt-5">
+                    <!-- API-view-result-title -->
+                    <div class="col-10 h5"><i class="fas fa-play"></i> 충청북도_동물위생시험소 전염성해면상뇌증현황</div>
+                    <div class="col-2 d-flex justify-content-end">
+                        <button type="button" class="btn btn-success"><a href="#">활용신청</a></button>
                     </div>
                 </div>
 
-                <!-- API-detail-API-dfunc/Use-use_case tab -->
+                <!-- API-view-API-result-info /등록일, 갱신일 등등을 왼쪽 정렬할지 가운데 정렬할지 생각 -->
+                <div class="row mt-3 mx-auto">
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">등록일</div>
+                    <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
+                    <div
+                        class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center">
+                        갱신일</div>
+                    <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">분류</div>
+                    <div class="col-10 py-3">농림 > 농업·농촌</div>
+                </div>
+                <div class="row  mx-auto">
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">제공기관
+                    </div>
+                    <div class="col-10 py-3 border-top">-</div>
+                </div>
+                <div class="row mx-auto">
+                    <div
+                        class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center">
+                        담당부서</div>
+                    <div class="col-10 py-3 border-top border-bottom">-</div>
+                </div>
+
+
+
+                <!-- API-view-API-dfunc/Use-use_case tab -->
+                <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="dfunc-tab" data-bs-toggle="tab" data-bs-target="#dfunc"
+                            type="button" role="tab" aria-controls="dfunc" aria-selected="true">상세기능</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="use_case-tab" data-bs-toggle="tab" data-bs-target="#use_case"
+                            type="button" role="tab" aria-controls="use_case" aria-selected="false">활용사례</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- 상세기능 tab(dfunc) -->
+                    <div class="tab-pane fade show active border" id="dfunc" role="tabpanel"
+                        aria-labelledby="dfunc-tab">
+                        <div class="row mx-1 py-4">
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">Endpoint</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">구조</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">요청변수</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">응답변수</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+                        </div>
+                    </div>
+                    <!-- 활용사례 tab(use_case) -->
+                    <div class="tab-pane fade border" id="use_case" role="tabpanel" aria-labelledby="use_case-tab">
+                        <div class="row mx-1 py-4">
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">등록</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">조회</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">수정</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+
+                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">삭제</h6>
+                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 수정본 끝 -->
+
+
+
+
+
+                <!-- 원본 -->
+                <!-- <div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-success"><a href="dev/action.html">활용신청</a></button>
+                    </div>
+
+                    //API-detail-API-name
+                    <div class="card mt-2">
+                        <h4 class="card-header">API 이름</h4>
+                        <div class="card-body">충청북도_동물위생시험소 전염성해면상뇌증현황</div>
+                    </div>
+
+                    //API-detail-API-detail-info
+                    <div class="card mt-5">
+                        <h4 class="card-header">
+                            API 조회 정보
+                        </h4>
+                        <div class="card-body">
+                            <div class="row">
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">API이름</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">충청북도_동물위생시험소 전염성해면상뇌증현황
+                                </h6>
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">분류</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">농림 > 농업·농촌</h6>
+
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">등록일</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">2021-03-01</h6>
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">갱신일</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">2021-04-01</h6>
+
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">제공기관</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">-</h6>
+                                <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">담당부서</h6>
+                                <h6 class="card-text col-12 col-md-5 d-flex align-items-center">-</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- //API-view-API-dfunc/Use-use_case tab
                 <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="dfunc-tab" data-bs-toggle="tab" data-bs-target="#dfunc"
@@ -126,9 +222,12 @@
                             <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <!-- 원본 끝 -->
 
-                <!-- API-detail-API-backbutt -->
+
+
+                <!-- API-view-API-backbutt -->
                 <div class="d-flex justify-content-center mt-5 text-light">
                     <button type="button" class="btn btn-primary">목록</button>
                 </div>
