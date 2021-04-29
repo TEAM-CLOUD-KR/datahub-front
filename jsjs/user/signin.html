@@ -26,12 +26,14 @@
             --blue: #8DB4D8;
             --red: #EF857F;
         }
+
         .login_btn {
             background-color: var(--blue);
             font-weight: bold;
             color: white !important;
         }
-        .login_bottom{
+
+        .login_bottom {
             margin-bottom: 200px;
         }
     </style>
@@ -67,6 +69,8 @@
             });
         };
     </script>
+    <script src="../js/signin.js"></script>
+
 </head>
 <body>
 <!--<div th:replace="fragments/header.html :: fragment-header"></div>-->
@@ -82,17 +86,17 @@
                         </a>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></i></span>
                         <input type="text" class="form-control" placeholder="이메일"
                                aria-describedby="basic-addon1" id="text-username">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
                         <input type="password" class="form-control" placeholder="비밀번호"
                                aria-describedby="basic-addon1" id="text-password">
                     </div>
                     <div class="d-grid gap-2 mb-3">
-                        <button type="button" class="btn login_btn" id="btn-login">ENTER</button>
+                        <button type="button" class="btn login_btn" id="btn-login" onclick="validate();">ENTER</button>
                     </div>
                     <hr>
                     <div class="d-grid justify-content-center mb-5">

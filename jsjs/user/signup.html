@@ -36,6 +36,7 @@
             margin-bottom: 200px;
         }
     </style>
+    <script src="../js/signup.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header.html :: fragment-header"></div>
@@ -52,28 +53,27 @@
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input type="text" class="form-control" placeholder="이메일">
-                        <span class="input-group-text">@</span>
-                        <input type="text" class="form-control" placeholder="datahub.com">
+                        <input type="text" class="form-control" placeholder="register@datahub.com" id="email">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                         <input type="text" class="form-control" placeholder="닉네임"
-                               aria-describedby="basic-addon1">
+                               aria-describedby="basic-addon1" id="nick-name">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                         <input type="password" class="form-control" placeholder="비밀번호"
-                               aria-describedby="basic-addon1">
+                               aria-describedby="basic-addon1" id="pw">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="password" class="form-control" placeholder="비밀번호재확인"
-                               aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="비밀번호 확인"
+                               aria-describedby="basic-addon1" id="pw02">
                     </div>
                     <hr>
                     <div class="d-grid gap-2 mb-3">
-                        <button type="button" class="btn login_btn" id="btn-login">SIGNUP</button>
+                        <button type="button" class="btn login_btn" id="btn-login" onclick="validate();">REGISTER
+                        </button>
                     </div>
                 </div>
             </div>
