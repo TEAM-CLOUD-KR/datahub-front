@@ -59,29 +59,25 @@
 
                 <!-- API-view-API-result-info /등록일, 갱신일 등등을 왼쪽 정렬할지 가운데 정렬할지 생각 -->
                 <div class="row mt-3 mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">등록일</div>
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">등록일</div>
                     <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
-                    <div
-                        class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center">
-                        갱신일</div>
+                    <div class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center fw-bold">갱신일</div>
                     <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
                 </div>
                 <div class="row mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">분류</div>
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">분류</div>
                     <div class="col-10 py-3">농림 > 농업·농촌</div>
                 </div>
                 <div class="row  mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center">제공기관
+                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">제공기관
                     </div>
                     <div class="col-10 py-3 border-top">-</div>
                 </div>
                 <div class="row mx-auto">
-                    <div
-                        class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center">
-                        담당부서</div>
+                    <div class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center fw-bold">담당부서</div>
                     <div class="col-10 py-3 border-top border-bottom">-</div>
                 </div>
-
+                
 
 
                 <!-- API-view-API-dfunc/Use-use_case tab -->
@@ -97,39 +93,46 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <!-- 상세기능 tab(dfunc) -->
-                    <div class="tab-pane fade show active border" id="dfunc" role="tabpanel"
+                    <div class="tab-pane fade show active" id="dfunc" role="tabpanel"
                         aria-labelledby="dfunc-tab">
-                        <div class="row mx-1 py-4">
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">Endpoint</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">구조</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">요청변수</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">응답변수</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr class="bg-light border-end border-white">
+                                    <th class="col-2">Endpoint</th>
+                                    <th class="col-2">구조</th>
+                                    <th class="col-2">요청변수</th>
+                                    <th class="col-2">응답변수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ewsffe</td>
+                                    <td>edfsd</td>
+                                    <td>sdgv</td>
+                                    <td>sefsease</td>
+                                </tr>
+                                <tr>
+                                    <td>ewsffe</td>
+                                    <td>edfsd</td>
+                                    <td>sdgv</td>
+                                    <td>sefsease</td>
+                                </tr>
+                                <tr>
+                                    <td>ewsffe</td>
+                                    <td>edfsd</td>
+                                    <td>sdgv</td>
+                                    <td>sefsease</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$여기까지는 ㅇㅋ -->
                     <!-- 활용사례 tab(use_case) -->
-                    <div class="tab-pane fade border" id="use_case" role="tabpanel" aria-labelledby="use_case-tab">
-                        <div class="row mx-1 py-4">
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">등록</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">조회</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">수정</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-
-                            <h6 class="col-12 col-md-1 text-center bg-primary text-white py-2">삭제</h6>
-                            <h6 class="card-text col-12 col-md-11 d-flex align-items-center">-</h6>
-                        </div>
+                    <div class="tab-pane fade" id="use_case" role="tabpanel" aria-labelledby="use_case-tab">
+                        <div>등록</div>
+                        <div>조회</div>
+                        <div>수정</div>
+                        <div>삭제</div>
                     </div>
                 </div>
                 <!-- 수정본 끝 -->
