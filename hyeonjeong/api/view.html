@@ -49,39 +49,44 @@
 
 
                 <!-- 수정본 -->
-                <div class="row mt-5">
+                <div class="row mt-2">
                     <!-- API-view-result-title -->
-                    <div class="col-10 h5"><i class="fas fa-play"></i> 충청북도_동물위생시험소 전염성해면상뇌증현황</div>
+                    <div class="col-10 h5 my-0 d-flex align-items-end"><i class="fas fa-play"></i>충청북도_동물위생시험소 전염성해면상뇌증현황</div>
                     <div class="col-2 d-flex justify-content-end">
                         <button type="button" class="btn btn-success"><a href="#">활용신청</a></button>
                     </div>
                 </div>
 
-                <!-- API-view-API-result-info /등록일, 갱신일 등등을 왼쪽 정렬할지 가운데 정렬할지 생각 -->
-                <div class="row mt-3 mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">등록일</div>
+                <!-- API-view-API-result-info -->
+                <div class="row mt-2 mx-auto">
+                    <div class="col-2 py-3 bg-light border-white d-flex justify-content-center fw-bold">
+                        등록일</div>
                     <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
-                    <div class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center fw-bold">갱신일</div>
+                    <div class="col-2 py-3 bg-light border-white d-flex justify-content-center fw-bold">
+                        갱신일</div>
                     <div class="col-4 py-3 border-top border-bottom">2021-04-28</div>
                 </div>
                 <div class="row mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">분류</div>
+                    <div class="col-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
+                        분류</div>
                     <div class="col-10 py-3">농림 > 농업·농촌</div>
                 </div>
                 <div class="row  mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-secondary d-flex justify-content-center fw-bold">제공기관
+                    <div class="col-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
+                        제공기관
                     </div>
                     <div class="col-10 py-3 border-top">-</div>
                 </div>
                 <div class="row mx-auto">
-                    <div class="col-2 py-3 bg-light border-top border-bottom border-secondary d-flex justify-content-center fw-bold">담당부서</div>
+                    <div class="col-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
+                        담당부서</div>
                     <div class="col-10 py-3 border-top border-bottom">-</div>
                 </div>
-                
+
 
 
                 <!-- API-view-API-dfunc/Use-use_case tab -->
-                <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+                <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="dfunc-tab" data-bs-toggle="tab" data-bs-target="#dfunc"
                             type="button" role="tab" aria-controls="dfunc" aria-selected="true">상세기능</button>
@@ -93,8 +98,7 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <!-- 상세기능 tab(dfunc) -->
-                    <div class="tab-pane fade show active" id="dfunc" role="tabpanel"
-                        aria-labelledby="dfunc-tab">
+                    <div class="tab-pane fade show active" id="dfunc" role="tabpanel" aria-labelledby="dfunc-tab">
                         <table class="table">
                             <thead>
                                 <tr class="bg-light border-end border-white">
@@ -129,10 +133,40 @@
                     <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$여기까지는 ㅇㅋ -->
                     <!-- 활용사례 tab(use_case) -->
                     <div class="tab-pane fade" id="use_case" role="tabpanel" aria-labelledby="use_case-tab">
-                        <div>등록</div>
-                        <div>조회</div>
-                        <div>수정</div>
-                        <div>삭제</div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="bg-light border-end border-white text-center">
+                                    <th class="col-1">No.</th>
+                                    <th class="col-1">분류</th>
+                                    <th class="col-3">내용</th>
+                                    <th class="col-2">작성자</th>
+                                    <th class="col-2">등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">ㅇㄴㄹ</td>
+                                    <td>edfsd</td>
+                                    <td class="text-center">ㄴㅇㄹ</td>
+                                    <td class="text-center">2021.04.30</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">ㄴㅇㄹ</td>
+                                    <td>edfsd</td>
+                                    <td class="text-center">ㅇㄴㄹ</td>
+                                    <td class="text-center">2021.04.30</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">ㅇㄴㅇ</td>
+                                    <td>edfsd</td>
+                                    <td class="text-center">ㅇㄴㅇ</td>
+                                    <td class="text-center">2021.04.30</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <!-- 수정본 끝 -->
