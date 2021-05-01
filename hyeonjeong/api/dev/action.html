@@ -19,6 +19,9 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+    <!-- Java Script Link -->
+    <script src="/js/api/dev/action.js"></script>
     <style>
         ol,
         ul,
@@ -37,17 +40,6 @@
         }
     </style>
 
-    <script>
-        function validate() {
-
-            if (api_action.reason.value == "") {
-                alert("신청사유를 적어주세요");
-                api_action.reason.focus();
-                return false;
-            }
-            alert("신청이 정상적으로 완료되었습니다.");
-        }
-    </script>
 </head>
 
 <body>
