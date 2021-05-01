@@ -15,6 +15,7 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="../js/javascript/post.js"></script>
 </head>
 <body>
 <!--헤더부분-->
@@ -24,14 +25,14 @@
     <div class="col-12">
         <div class="input-group mb-3">
             <span class="input-group-text"><i class="fas fa-pen"></i></span>
-            <input type="text" class="form-control" placeholder="제목">
+            <input type="text" class="form-control" placeholder="제목" id="subject">
         </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
             <label for="floatingTextarea2">내용</label>
         </div>
         <div class="justify-content-end d-flex mt-3">
-            <button type="button" class="btn btn-primary">등록</button>
+            <button type="button" class="btn btn-primary" onclick="post_validate();">등록</button>
             <button type="button" class="btn btn-danger ms-3">삭제</button>
         </div>
 
