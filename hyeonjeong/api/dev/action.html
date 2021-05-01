@@ -36,42 +36,63 @@
             color: inherit;
         }
     </style>
+
+    <script>
+        function validate() {
+
+            if (api_action.reason.value == "") {
+                alert("신청사유를 적어주세요");
+                api_action.reason.focus();
+                return false;
+            }
+
+            alert("회원가입이 완료되었습니다.");
+
+        }
+    </script>
 </head>
 
 <body>
     <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
         <div class="col-10 mx-auto">
-            <h2>API 활용 신청</h2>
-            <div class="row mt-3">
-                <!-- API-action-api-name -->
-                <div class="input-group">
-                    <div class="col-4 col-md-2 input-group-text fw-bold">API이름</div>
-                    <div class="form-control">aeefwf</div>
+            <form name="api_action" onsubmit="return validate();" action="">
+                <h2>API 활용 신청</h2>
+                <div class="row mt-3">
+                    <!-- API-action-api-name -->
+                    <div class="input-group">
+                        <div class="col-4 col-md-2 input-group-text fw-bold">API이름</div>
+                        <div class="form-control">aeefwf</div>
+                    </div>
+                    <!-- API-action-user-name -->
+                    <div class="input-group mt-3">
+                        <span class="col-4 col-md-2 input-group-text fw-bold">작성자</span>
+                        <span class="form-control">sdfsdf</span>
+                    </div>
                 </div>
-                <!-- API-action-user-name -->
-                <div class="input-group mt-3">
-                    <span class="col-4 col-md-2 input-group-text fw-bold">작성자</span>
-                    <span class="form-control">sdfsdf</span>
+                <!-- API-action-reason -->
+                <div class="form-floating mt-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px" name="reason" value=""></textarea>
+                    <label class="fw-bold">신청 사유</label>
                 </div>
-            </div>
-            <!-- API-action-reason -->
-            <div class="form-floating mt-3">
-                <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
-                <label class="fw-bold">신청 사유</label>
-            </div>
-            <!-- API-action-button -->
-            <div class="mt-3 d-flex align-items-center justify-content-center">
-                <button type="button" class="btn btn-success btn-sm justify-content-center mx-1">
-                    <a href="#">신청하기</a>
-                </button>
-                <button type="button" class="btn btn-danger btn-sm justify-content-center mx-1">
-                    <a href="#">취소</a>
-                </button>
-            </div>
-
+                <!-- API-action-button -->
+                <div class="mt-3 d-flex align-items-center justify-content-center">
+                    <button type="submit" class="btn btn-success btn-sm justify-content-center mx-1">
+                        <a href="#">신청하기</a>
+                    </button>
+                    <button class="btn btn-danger btn-sm justify-content-center mx-1">
+                        <a href="#">취소</a>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <!-- 
+    <form name="join" onsubmit="return validate();" action="http://coding-factory.tistory.com/196" method="post"
+        enctype="text/plain">
+        <td><textarea name="self" cols="40" rows="7"></textarea></td>
+         -->
 </body>
 
 </html>
