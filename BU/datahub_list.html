@@ -44,6 +44,7 @@
 </head>
 
 <body>
+    <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 mx-auto">
@@ -109,71 +110,72 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-between">
-                        <div class="col-lg-7">
-                            <div>
+                        <div class="col-lg-8">
+                            <div class="mt-4">
                                 <span>
-                                    <h3>주제</h3>
+                                    <!-- <h3>주제</h3> -->
                                 </span>
                             </div>
-                            <div class="d-flex">
+                            <div class="d-flex justify-content-center mb-3">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-school-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-school" type="button" role="tab"
-                                            aria-controls="pills-school" aria-selected="true"><i
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-school-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-school" type="button"
+                                            role="tab" aria-controls="pills-school" aria-selected="true"><i
                                                 class="fas fa-school fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-industry-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-industry" type="button" role="tab"
-                                            aria-controls="pills-industry" aria-selected="false">
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-industry-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-industry" type="button"
+                                            role="tab" aria-controls="pills-industry" aria-selected="false">
                                             <i class="fas fa-industry fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-helping-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-helping" type="button" role="tab"
-                                            aria-controls="pills-helping" aria-selected="false">
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-helping-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-helping" type="button"
+                                            role="tab" aria-controls="pills-helping" aria-selected="false">
                                             <i class="fas fa-hands-helping fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-medkit-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-medkit" type="button" role="tab"
-                                            aria-controls="pills-medkit" aria-selected="false">
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-medkit-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-medkit" type="button"
+                                            role="tab" aria-controls="pills-medkit" aria-selected="false">
                                             <i class="fas fa-medkit fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-departure-tab" data-bs-toggle="pill"
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark"
+                                            id="pills-departure-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-departure" type="button" role="tab"
                                             aria-controls="pills-departure" aria-selected="false">
                                             <i class="fas fa-plane-departure fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-city-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-city" type="button" role="tab"
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-city-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-city" type="button" role="tab"
                                             aria-controls="pills-city" aria-selected="false">
                                             <i class="fas fa-city fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-car-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-car" type="button" role="tab"
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-car-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-car" type="button" role="tab"
                                             aria-controls="pills-car" aria-selected="false">
                                             <i class="fas fa-car-side fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-leaf-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-leaf" type="button" role="tab"
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-leaf-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-leaf" type="button" role="tab"
                                             aria-controls="pills-leaf" aria-selected="false">
                                             <i class="fas fa-leaf fa-2x"></i></button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-flask-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-flask" type="button" role="tab"
+                                    <li class="nav-item me-3" role="presentation">
+                                        <button class="border border-white btn btn-outline-dark" id="pills-flask-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-flask" type="button" role="tab"
                                             aria-controls="pills-flask" aria-selected="false">
                                             <i class="fas fa-flask fa-2x"></i></button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-gavel-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-gavel" type="button" role="tab"
+                                        <button class="border border-white btn btn-outline-dark" id="pills-gavel-tab"
+                                            data-bs-toggle="pill" data-bs-target="#pills-gavel" type="button" role="tab"
                                             aria-controls="pills-gavel" aria-selected="false">
                                             <i class="fas fa-gavel fa-2x"></i></button>
                                     </li>
@@ -215,8 +217,40 @@
                                                 </div>
                                             </a>
                                         </li>
+                                        <li class="">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <ul class="d-flex justify-content-between mb-3">
+                                        <li class="d-flex">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
                                         <li class="d-flex">
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
@@ -291,25 +325,35 @@
 
 
                         </div>
-                        <div class="col-lg-4 border border-2 rounded-3">
-                            <div class="mb-2">
-                                <span>
-                                    <h3>랭킹</h3>
-                                </span>
-                            </div>
-                            <div class="fs-5">
-                                <ul>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class="mb-1"><a href="#">1. asdfsadf</a></li>
-                                    <li class=""><a href="#">1. asdfsadf</a></li>
-                                </ul>
+                        <div class="col-lg-3 border border-2 rounded-3">
+                            <div class="ms-4">
+                                <div class="mb-4 mt-4">
+                                    <span>
+                                        <h3>랭킹</h3>
+                                    </span>
+                                </div>
+                                <div class="fs-5">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <ul>
+                                                <li class="mb-3"><a href="#">1. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">2. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">3. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">4. asdfsadf</a></li>
+                                                <li class=""><a href="#">5. asdfsadf</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <ul>
+                                                <li class="mb-3"><a href="#">6. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">7. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">8. asdfsadf</a></li>
+                                                <li class="mb-3"><a href="#">9. asdfsadf</a></li>
+                                                <li class=""><a href="#">10. asdfsadf</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
