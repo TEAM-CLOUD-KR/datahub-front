@@ -65,18 +65,21 @@
             </div>
         </div>
         <ul class="sidebar_ul mt-3">
-            <li class="sidebar_li"><a href="#">페이지1</a></li>
-            <li class="sidebar_li"><a href="#">페이지1</a></li>
-            <li class="sidebar_li"><a href="#">페이지1</a></li>
+            <li class="sidebar_li"><a href="#">홈</a></li>
+            <li class="sidebar_li"><a href="#">문서관리</a></li>
+            <li class="sidebar_li"><a href="#">API</a></li>
         </ul>
     </div>
 
     <div class="content col-lg-9 col-md-8" style="background-color: #fff">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid justify-content-end">
+            <div class="container-fluid">
+                <div>
+                    <h2 class="ms-3" style="margin-bottom: 0;">DataHub</h2>
+                </div>
 
 
-                <button class="btn navbar-toggler fas fa-bars" type="button" data-bs-toggle="offcanvas"
+                <button class="btn navbar-toggler fas fa-bars me-2" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 </button>
 
@@ -84,7 +87,7 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                      aria-labelledby="offcanvasExampleLabel" style="background-color: #8DB4D8">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">개인페이지 메뉴</h5>
+                        <!--                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">개인페이지 메뉴</h5>-->
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                     </div>
@@ -100,26 +103,33 @@
                                 <!--                    <p class="text-muted font-size-sm" style="color: #fff!important;">스치면 인연... 스며들면 스폰지밥...</p>-->
                             </div>
                         </div>
+                        <form class="d-flex mt-3">
+                            <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
+                            <button type="button" class="btn btn-primary">Search</button>
+                        </form>
                         <div class="dropdown mt-3">
                             <ul class="sidebar_ul mt-3">
-                                <li class="sidebar_li"><a href="#">페이지1</a></li>
-                                <li class="sidebar_li"><a href="#">페이지1</a></li>
-                                <li class="sidebar_li"><a href="#">페이지1</a></li>
+                                <li class="sidebar_li"><a href="#">홈</a></li>
+                                <li class="sidebar_li"><a href="#">문서관리</a></li>
+                                <li class="sidebar_li"><a href="#">API</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-                    <h2>페이지1</h2>
-                    <form class="d-flex justify-content-end">
+                <div class="collapse navbar-collapse d-flex ms-2 justify-content-end d-none"
+                     id="navbarSupportedContent">
+                    <!--                    <h2>페이지1</h2>-->
+                    <form class="d-flex me-2">
                         <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button type="button" class="btn btn-primary">Search</button>
                     </form>
                 </div>
             </div>
         </nav>
-        content
+        <div class="ms-3">
+            content
+        </div>
 
     </div>
 </div>
