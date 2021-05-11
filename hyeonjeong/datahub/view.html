@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
     <style>
         ol,
         ul,
@@ -43,53 +50,95 @@
         <div class="row">
             <div class="col-10 mx-auto">
                 <!-- datahub-view-page-big-title -->
-                <h2>데이터 허브 상세 조회</h2>
+                <h2 class="mb-3">데이터 허브 상세 조회</h2>
 
-                <!-- datahub-view-page-data-name -->
-                <div class="col-12 mt-3 fs-5"><i class="fas fa-arrow-alt-circle-right"></i>대구광역시 남구 편의점 분포현황</div>
-
-                <!-- datahub-view-result-info -->
-                <div class="row mt-2 mx-auto">
-                    <div class="col-4 col-md-2 py-3 bg-light border-white d-flex justify-content-center fw-bold">
-                        등록일</div>
-                    <div class="col-8 col-md-4 py-3 border-top border-bottom">2021-04-28</div>
-                    <div class="col-4 col-md-2 py-3 bg-light border-white d-flex justify-content-center fw-bold">
-                        갱신일</div>
-                    <div class="col-8 col-md-4 py-3 border-top border-bottom">2021-05-02</div>
-                </div>
-                <div class="row mx-auto">
-                    <div
-                        class="col-4 col-md-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
-                        분류</div>
-                    <div class="col-8 col-md-10 py-3">농림<span class="fw-bold"> > </span> 농업·농촌</div>
-                </div>
-                <div class="row  mx-auto">
-                    <div
-                        class="col-4 col-md-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
-                        제공기관
+                <h4>API목록</h4>
+                <div class="row mx-auto d-flex justify-content-between">
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
                     </div>
-                    <div class="col-8 col-md-10 py-3 border-top">한국한국한국한국원</div>
-                </div>
-                <div class="row mx-auto">
-                    <div
-                        class="col-4 col-md-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
-                        담당부서</div>
-                    <div class="col-8 col-md-10 py-3 border-top">한국한국한국한국부</div>
-                </div>
-                <div class="row mx-auto">
-                    <div
-                        class="col-4 col-md-2 py-3 bg-light border-top border-white d-flex justify-content-center fw-bold">
-                        데이터 파일</div>
-                    <div class="col-8 col-md-10 py-3 border-top border-bottom">
-                        <button type="button" class="btn btn-dark btn-sm">다운로드</button>
-                        <span>[99999KB]</span>
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
                     </div>
                 </div>
-
-                <!-- datahub-view-btn -->
-                <div class="d-flex justify-content-end mt-2">
-                    <button type="button" class="btn btn-dark">목록</button>
+                <div class="row mx-auto mb-4">
+                    <div class="col-3 mx-auto border rounded-3">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3">
+                        <a href="#">
+                            <div class="fw-bold">API이름</div>
+                            <div>API내용</div>
+                            <div>카테고리</div>
+                        </a>
+                    </div>
                 </div>
+
+                <h4>데이터셋 목록</h4>
+                <div class="row mx-auto">
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3 mb-4">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-3 mx-auto border rounded-3">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                    <div class="col-3 mx-auto border rounded-3">
+                        <div class="fw-bold">데이터셋 이름</div>
+                        <div>데이터셋 내용</div>
+                        <div>카테고리</div>
+                    </div>
+                </div>
+                <!--글씨 쓰기 필요없음 
+                api나 데이터셋 목록
+                그리드, 베너로
+                리스트형식으로 하지말기 -->
             </div>
         </div>
     </div>
