@@ -110,125 +110,185 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-between">
                         <div class="col-lg-7">
-                            <span>
-                                <h3>주제</h3>
-                            </span>
-                            <div class="mb-5">
-                                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
-                                    data-bs-interval="false">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <button type="button" class="">
-                                                <i class="fas fa-school fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-industry fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-hands-helping fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-medkit fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-plane-departure fa-4x"></i></button>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <button type="button" class="">
-                                                <i class="fas fa-city fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-car-side fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-leaf fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-flask fa-4x"></i></button>
-                                            <button type="button" class="">
-                                                <i class="fas fa-gavel fa-4x"></i></button>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden"></span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden"></span>
-                                    </button>
+                            <div>
+                                <span>
+                                    <h3>주제</h3>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-school-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-school" type="button" role="tab"
+                                            aria-controls="pills-school" aria-selected="true"><i
+                                                class="fas fa-school fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-industry-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-industry" type="button" role="tab"
+                                            aria-controls="pills-industry" aria-selected="false">
+                                            <i class="fas fa-industry fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-helping-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-helping" type="button" role="tab"
+                                            aria-controls="pills-helping" aria-selected="false">
+                                            <i class="fas fa-hands-helping fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-medkit-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-medkit" type="button" role="tab"
+                                            aria-controls="pills-medkit" aria-selected="false">
+                                            <i class="fas fa-medkit fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-departure-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-departure" type="button" role="tab"
+                                            aria-controls="pills-departure" aria-selected="false">
+                                            <i class="fas fa-plane-departure fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-city-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-city" type="button" role="tab"
+                                            aria-controls="pills-city" aria-selected="false">
+                                            <i class="fas fa-city fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-car-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-car" type="button" role="tab"
+                                            aria-controls="pills-car" aria-selected="false">
+                                            <i class="fas fa-car-side fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-leaf-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-leaf" type="button" role="tab"
+                                            aria-controls="pills-leaf" aria-selected="false">
+                                            <i class="fas fa-leaf fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-flask-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-flask" type="button" role="tab"
+                                            aria-controls="pills-flask" aria-selected="false">
+                                            <i class="fas fa-flask fa-2x"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-gavel-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-gavel" type="button" role="tab"
+                                            aria-controls="pills-gavel" aria-selected="false">
+                                            <i class="fas fa-gavel fa-2x"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-school" role="tabpanel"
+                                    aria-labelledby="pills-school-tab">
+                                    <ul class="d-flex justify-content-between mb-4">
+                                        <li class="">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="d-flex justify-content-between mb-3">
+                                        <li class="d-flex">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex">
+                                            <a href="#" class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="image/1.PNG" alt="" class="me-3">
+                                                </div>
+                                                <div>
+                                                    <strong>지섭이</strong>
+                                                    <p>지섭이의 점심메뉴는?</p>
+                                                    <div>
+                                                        <span>#한솥</span>
+                                                        <span>#토마토</span>
+                                                        <span>#편의점</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <div class="tab-pane fade" id="pills-industry" role="tabpanel"
+                                    aria-labelledby="pills-industry-tab">
+                                    industry
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <div class="tab-pane fade" id="pills-helping" role="tabpanel"
+                                    aria-labelledby="pills-helping-tab">
+                                    helping
+                                </div>
+                                <div class="tab-pane fade" id="pills-medkit" role="tabpanel"
+                                    aria-labelledby="pills-medkit-tab">
+                                    medkit
+                                </div>
+                                <div class="tab-pane fade" id="pills-departure" role="tabpanel"
+                                    aria-labelledby="pills-departure-tab">
+                                    departure
+                                </div>
+                                <div class="tab-pane fade" id="pills-city" role="tabpanel"
+                                    aria-labelledby="pills-city-tab">
+                                    city
+                                </div>
+                                <div class="tab-pane fade" id="pills-car" role="tabpanel"
+                                    aria-labelledby="pills-car-tab">
+                                    car
+                                </div>
+                                <div class="tab-pane fade" id="pills-leaf" role="tabpanel"
+                                    aria-labelledby="pills-leaf-tab">
+                                    leaf
+                                </div>
+                                <div class="tab-pane fade" id="pills-flask" role="tabpanel"
+                                    aria-labelledby="pills-flask-tab">
+                                    flask
+                                </div>
+                                <div class="tab-pane fade" id="pills-gavel" role="tabpanel"
+                                    aria-labelledby="pills-gavel-tab">
+                                    gavel
                                 </div>
                             </div>
 
-                            <ul class="d-flex justify-content-between mb-4">
-                                <li class="">
-                                    <a href="#" class="d-flex">
-                                        <div class="d-flex align-items-center">
-                                            <img src="image/1.PNG" alt="" class="me-3">
-                                        </div>
-                                        <div>
-                                            <strong>지섭이</strong>
-                                            <p>지섭이의 점심메뉴는?</p>
-                                            <div>
-                                                <span>#한솥</span>
-                                                <span>#토마토</span>
-                                                <span>#편의점</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" class="d-flex">
-                                        <div class="d-flex align-items-center">
-                                            <img src="image/1.PNG" alt="" class="me-3">
-                                        </div>
-                                        <div>
-                                            <strong>지섭이</strong>
-                                            <p>지섭이의 점심메뉴는?</p>
-                                            <div>
-                                                <span>#한솥</span>
-                                                <span>#토마토</span>
-                                                <span>#편의점</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-
-
-                            <ul class="d-flex justify-content-between mb-3">
-                                <li class="d-flex">
-                                    <a href="#" class="d-flex">
-                                        <div class="d-flex align-items-center">
-                                            <img src="image/1.PNG" alt="" class="me-3">
-                                        </div>
-                                        <div>
-                                            <strong>지섭이</strong>
-                                            <p>지섭이의 점심메뉴는?</p>
-                                            <div>
-                                                <span>#한솥</span>
-                                                <span>#토마토</span>
-                                                <span>#편의점</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="d-flex">
-                                    <a href="#" class="d-flex">
-                                        <div class="d-flex align-items-center">
-                                            <img src="image/1.PNG" alt="" class="me-3">
-                                        </div>
-                                        <div>
-                                            <strong>지섭이</strong>
-                                            <p>지섭이의 점심메뉴는?</p>
-                                            <div>
-                                                <span>#한솥</span>
-                                                <span>#토마토</span>
-                                                <span>#편의점</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
 
                         </div>
                         <div class="col-lg-4 border border-2 rounded-3">
