@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <style>
         ul {
             list-style: none;
@@ -23,97 +23,94 @@
 </head>
 
 <body>
-    <div th:replace="fragments/header.html :: fragment-header"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="mb-5">데이터 목록 및 조회</h2>
-                <div class="d-flex">
-                    <input type="text" id="keyword" class="form-control" title="검색어를 입력하세요" placeholder="검색어를 입력하세요"
-                        autocomplete="off">
-                    <button type="button" class="btn btn-primary" id="btn-search">
-                        <i class="fas fa-search"></i></button>
-                    <input type="button" class="btn btn-outline-primary col-md-auto" data-bs-toggle="collapse"
-                        href="#collapseExample" value="고급 검색">
-                </div>
-                <div class="row mb-5">
-                    <div class="collapse show" id="collapseExample">
-                        <div class="row gx-0 mt-2">
-                            <div class="border col-12 col-md-3">
-                                <div class="p-2 text-center">분류</div>
-                                <div>
-                                    <ul>
-                                        <li>
+<div th:replace="fragments/header.html :: fragment-header"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <h2 class="mb-5">데이터 목록 및 조회</h2>
+            <div class="d-flex">
+                <input type="text" id="keyword" class="form-control" title="검색어를 입력하세요" placeholder="검색어를 입력하세요"
+                       autocomplete="off">
+                <button type="button" class="btn btn-primary" id="btn-search">
+                    <i class="fas fa-search"></i></button>
+                <input type="button" class="btn btn-outline-primary col-md-auto" data-bs-toggle="collapse"
+                       href="#collapseExample" value="고급 검색">
+            </div>
+            <div class="row mb-5">
+                <div class="collapse show" id="collapseExample">
+                    <div class="row gx-0 mt-2">
+                        <div class="border col-12 col-md-3">
+                            <div class="p-2 text-center">분류</div>
+                            <div>
+                                <ul>
+                                    <li>
 
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="border col-12 col-md-3">
-                                <div class="p-2 text-center">서비스유형</div>
-                                <div>
-                                    <ul>
-                                        <li>
+                        </div>
+                        <div class="border col-12 col-md-3">
+                            <div class="p-2 text-center">서비스유형</div>
+                            <div>
+                                <ul>
+                                    <li>
 
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="border col-12 col-md-3">
-                                <div class="p-2 text-center">제공기관유형</div>
-                                <div>
-                                    <ul>
-                                        <li>
+                        </div>
+                        <div class="border col-12 col-md-3">
+                            <div class="p-2 text-center">제공기관유형</div>
+                            <div>
+                                <ul>
+                                    <li>
 
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="border col-12 col-md-3">
-                                <div class="p-2 text-center">확장자</div>
-                                <div>
-                                    <ul>
-                                        <li>
+                        </div>
+                        <div class="border col-12 col-md-3">
+                            <div class="p-2 text-center">확장자</div>
+                            <div>
+                                <ul>
+                                    <li>
 
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-center my-5">총 <span class="text-primary">99999</span>개의 결과가
-                    검색되었습니다.</h3>
-                <div>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+            </div>
+            <h3 class="text-center my-5">총 <span class="text-primary">99999</span>개의 결과가
+                검색되었습니다.</h3>
+            <div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
                                 type="button" role="tab" aria-controls="home" aria-selected="true">전체데이터</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
                                 type="button" role="tab" aria-controls="profile" aria-selected="false">파일데이터</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">오픈데이터</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#d"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">표준데이터셋</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">전체데이터
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">파일데이터</div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">오픈데이터</div>
-                        <div class="tab-pane fade" id="d" role="tabpanel" aria-labelledby="contact-tab">표준데이터셋</div>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">전체데이터
                     </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">파일데이터</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">오픈데이터</div>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>
