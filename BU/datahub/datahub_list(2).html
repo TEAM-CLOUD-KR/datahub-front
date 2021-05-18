@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
     <!--    font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <style>
         ol,
         ul,
@@ -53,73 +53,54 @@
 </head>
 
 <body>
-    <div th:replace="fragments/header.html :: fragment-header"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mx-auto">
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <div class="search d-flex">
-                            <input type="text" id="keyword" class="form-control" title="검색어를 입력하세요"
-                                placeholder="검색어를 입력하세요" autocomplete="off">
-                            <button type="button" class="btn btn-primary" id="btn-search">
-                                <i class="fas fa-search"></i></button>
+<div th:replace="fragments/header.html :: fragment-header"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h2>데이터허브리스트</h2>
+            <div class="search d-flex">
+                <input type="text" id="keyword" class="form-control" title="검색어를 입력하세요"
+                       placeholder="검색어를 입력하세요" autocomplete="off">
+                <button type="button" class="btn btn-primary" id="btn-search">
+                    <i class="fas fa-search"></i></button>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <img src="../image/1.PNG" class="d-block w-100" alt="...">
+                            <img src="../image/2.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/3.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/4.PNG" class="d-block w-100 ms-3" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <img src="../image/5.PNG" class="d-block w-100" alt="...">
+                            <img src="../image/6.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/2.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/1.PNG" class="d-block w-100 ms-3" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <img src="../image/4.PNG" class="d-block w-100" alt="...">
+                            <img src="../image/5.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/6.PNG" class="d-block w-100 ms-3" alt="...">
+                            <img src="../image/1.PNG" class="d-block w-100 ms-3" alt="...">
                         </div>
                     </div>
                 </div>
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <span>
-                            <h3>ISSUE</h3>
-                        </span>
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="d-flex">
-                                        <img src="../image/1.PNG" class="d-block w-100" alt="...">
-                                        <img src="../image/2.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/3.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/4.PNG" class="d-block w-100 ms-3" alt="...">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="d-flex">
-                                        <img src="../image/5.PNG" class="d-block w-100" alt="...">
-                                        <img src="../image/6.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/2.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/1.PNG" class="d-block w-100 ms-3" alt="...">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="d-flex">
-                                        <img src="../image/4.PNG" class="d-block w-100" alt="...">
-                                        <img src="../image/5.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/6.PNG" class="d-block w-100 ms-3" alt="...">
-                                        <img src="../image/1.PNG" class="d-block w-100 ms-3" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-between">
                         <div class="col-lg-8">
@@ -198,6 +179,28 @@
                                     aria-labelledby="pills-school-tab">
                                     <ul class="col-12 d-flex justify-content-between mb-4">
                                         <li class="d-flex col-4">
+=======
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-12 col-lg-8 mt-3">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-school" role="tabpanel"
+                             aria-labelledby="pills-school-tab">
+                            <ul class="d-flex justify-content-between mb-4">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <li class="">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/7.PNG" alt="" class="me-3">
@@ -213,7 +216,13 @@
                                                 </div>
                                             </a>
                                         </li>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                                         <li class="d-flex col-4 ellipsis mx-3">
+=======
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <li class="">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/8.PNG" alt="" class="me-3">
@@ -229,7 +238,13 @@
                                                 </div>
                                             </a>
                                         </li>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                                         <li class="d-flex col-4 ellipsis">
+=======
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <li class="">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/9.PNG" alt="" class="me-3">
@@ -245,9 +260,19 @@
                                                 </div>
                                             </a>
                                         </li>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                                     </ul>
                                     <ul class="col-12 d-flex justify-content-between mb-3">
                                         <li class="col-4 d-flex ellipsis">
+=======
+                                    </div>
+                                </div>
+                            </ul>
+                            <ul class="d-flex justify-content-between mb-3">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <li class="d-flex">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/10.PNG" alt="" class="me-3">
@@ -263,7 +288,13 @@
                                                 </div>
                                             </a>
                                         </li>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                                         <li class="col-4 d-flex ellipsis mx-3">
+=======
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <li class="d-flex">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/11.PNG" alt="" class="me-3">
@@ -279,7 +310,13 @@
                                                 </div>
                                             </a>
                                         </li>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                                         <li class="col-4 d-flex ellipsis">
+=======
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <li class="d-flex">
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/12.PNG" alt="" class="me-3">
@@ -295,44 +332,9 @@
                                                 </div>
                                             </a>
                                         </li>
-                                    </ul>
+                                    </div>
                                 </div>
-                                <div class="tab-pane fade" id="pills-industry" role="tabpanel"
-                                    aria-labelledby="pills-industry-tab">
-                                    industry
-                                </div>
-                                <div class="tab-pane fade" id="pills-helping" role="tabpanel"
-                                    aria-labelledby="pills-helping-tab">
-                                    helping
-                                </div>
-                                <div class="tab-pane fade" id="pills-medkit" role="tabpanel"
-                                    aria-labelledby="pills-medkit-tab">
-                                    medkit
-                                </div>
-                                <div class="tab-pane fade" id="pills-departure" role="tabpanel"
-                                    aria-labelledby="pills-departure-tab">
-                                    departure
-                                </div>
-                                <div class="tab-pane fade" id="pills-city" role="tabpanel"
-                                    aria-labelledby="pills-city-tab">
-                                    city
-                                </div>
-                                <div class="tab-pane fade" id="pills-car" role="tabpanel"
-                                    aria-labelledby="pills-car-tab">
-                                    car
-                                </div>
-                                <div class="tab-pane fade" id="pills-leaf" role="tabpanel"
-                                    aria-labelledby="pills-leaf-tab">
-                                    leaf
-                                </div>
-                                <div class="tab-pane fade" id="pills-flask" role="tabpanel"
-                                    aria-labelledby="pills-flask-tab">
-                                    flask
-                                </div>
-                                <div class="tab-pane fade" id="pills-gavel" role="tabpanel"
-                                    aria-labelledby="pills-gavel-tab">
-                                    gavel
-                                </div>
+<<<<<<< HEAD:BU/datahub/datahub_list(2).html
                             </div>
                         </div>
                         <div class="col-lg-3 border border-2 rounded-3">
@@ -362,6 +364,71 @@
                                                 <li class="ellipsis"><a href="#">10. asdfsadf</a></li>
                                             </ul>
                                         </div>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="pills-industry" role="tabpanel"
+                             aria-labelledby="pills-industry-tab">
+                            industry
+                        </div>
+                        <div class="tab-pane fade" id="pills-helping" role="tabpanel"
+                             aria-labelledby="pills-helping-tab">
+                            helping
+                        </div>
+                        <div class="tab-pane fade" id="pills-medkit" role="tabpanel"
+                             aria-labelledby="pills-medkit-tab">
+                            medkit
+                        </div>
+                        <div class="tab-pane fade" id="pills-departure" role="tabpanel"
+                             aria-labelledby="pills-departure-tab">
+                            departure
+                        </div>
+                        <div class="tab-pane fade" id="pills-city" role="tabpanel"
+                             aria-labelledby="pills-city-tab">
+                            city
+                        </div>
+                        <div class="tab-pane fade" id="pills-car" role="tabpanel"
+                             aria-labelledby="pills-car-tab">
+                            car
+                        </div>
+                        <div class="tab-pane fade" id="pills-leaf" role="tabpanel"
+                             aria-labelledby="pills-leaf-tab">
+                            leaf
+                        </div>
+                        <div class="tab-pane fade" id="pills-flask" role="tabpanel"
+                             aria-labelledby="pills-flask-tab">
+                            flask
+                        </div>
+                        <div class="tab-pane fade" id="pills-gavel" role="tabpanel"
+                             aria-labelledby="pills-gavel-tab">
+                            gavel
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="fs-5">
+                        <div class="row">
+                            <div class="col-12 border border-2 rounded-3 mt-3">
+                                <div class="row mx-auto">
+                                    <div class="col-lg-6">
+                                        <ul>
+                                            <li class="mb-3"><a href="#">1. 과학관련API</a></li>
+                                            <li class="mb-3"><a href="#">2. dfdf</a></li>
+                                            <li class="mb-3"><a href="#">3. asdfsadf</a></li>
+                                            <li class="mb-3"><a href="#">4. asdfsadf</a></li>
+                                            <li class="mb-3"><a href="#">5. asdfsadf</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul>
+                                            <li class="mb-3"><a href="#">6. asdfsadf</a></li>
+                                            <li class="mb-3"><a href="#">7. asdfsadf</a></li>
+                                            <li class="mb-3"><a href="#">8. asdfsadf</a></li>
+                                            <li class="mb-3"><a href="#">9. asdfsadf</a></li>
+                                            <li class=""><a href="#">10. asdfsadf</a></li>
+                                        </ul>
+>>>>>>> e3714a891a7f1654b3416b041f41bb2b8ca903f7:BU/datahub/datahub_list.html
                                     </div>
                                 </div>
                             </div>
@@ -371,6 +438,7 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>
