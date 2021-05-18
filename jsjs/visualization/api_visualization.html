@@ -89,32 +89,34 @@
                                         data: [0, 10, 5, 2, 20, 30, 45],
                                     }],
                                     'bar'
-
                                 )
                             </script>
                         </div>
                         <div class="col-4">
                             <canvas id="myChart03"></canvas>
                             <script>
-                                line_bar_chart(
+                                mixed_chart(
                                     document.getElementById("myChart03"),
                                     [
                                         'January',
                                         'February',
                                         'March',
-                                        'April',
-                                        'May',
-                                        'June',
+                                        'April'
                                     ],
                                     [{
-                                        label: 'My First dataset',
-                                        backgroundColor: 'rgb(255, 99, 132)',
+                                        type: 'bar',
+                                        label: 'Bar Dataset',
+                                        data: [10, 20, 30, 40],
                                         borderColor: 'rgb(255, 99, 132)',
-                                        data: [0, 10, 5, 2, 20, 30, 45],
-                                    }],
-                                    'bar'
-
-                                )
+                                        backgroundColor: 'rgba(255, 99, 132, 0.2)'
+                                    }, {
+                                        type: 'line',
+                                        label: 'Line Dataset',
+                                        data: [50, 50, 50, 50],
+                                        fill: false,
+                                        borderColor: 'rgb(54, 162, 235)'
+                                    }]
+                                );
                             </script>
                         </div>
 
