@@ -37,6 +37,14 @@
         a:hover {
             text-decoration: underline;
         }
+        .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+        }
     </style>
 
     <title>Datahub_list</title>
@@ -48,15 +56,17 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mx-auto">
-            <h2>데이터허브리스트</h2>
-            <div class="search d-flex">
+            <p class="mb-4 fs-2">데이터허브리스트</p>
+            <div class="search d-flex mb-5">
                 <input type="text" id="keyword" class="form-control" title="검색어를 입력하세요"
                        placeholder="검색어를 입력하세요" autocomplete="off">
                 <button type="button" class="btn btn-primary" id="btn-search">
                     <i class="fas fa-search"></i></button>
             </div>
-
-            <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div>
+                <p class="fs-3">ISSUE</p>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide mt-3 mb-3" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -110,15 +120,15 @@
                             <ul class="d-flex justify-content-between mb-4">
                                 <div class="row">
                                     <div class="col-12 col-lg-4">
-                                        <li class="">
+                                        <li>
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/7.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -128,15 +138,15 @@
                                         </li>
                                     </div>
                                     <div class="col-12 col-lg-4">
-                                        <li class="">
+                                        <li>
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/8.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -146,15 +156,15 @@
                                         </li>
                                     </div>
                                     <div class="col-12 col-lg-4">
-                                        <li class="">
+                                        <li>
                                             <a href="#" class="d-flex">
                                                 <div class="d-flex align-items-center">
                                                     <img src="../image/9.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -174,9 +184,9 @@
                                                     <img src="../image/10.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -192,9 +202,9 @@
                                                     <img src="../image/11.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -210,9 +220,9 @@
                                                     <img src="../image/12.PNG" alt="" class="me-3">
                                                 </div>
                                                 <div>
-                                                    <strong>지섭이</strong>
-                                                    <p>지섭이의 점심메뉴는?</p>
-                                                    <div>
+                                                    <div class="fw-bold ellipsis">지섭이</div>
+                                                    <p class="ellipsis">지섭이의 점심메뉴는?</p>
+                                                    <div class="ellipsis">
                                                         <span>#한솥</span>
                                                         <span>#토마토</span>
                                                         <span>#편의점</span>
@@ -271,20 +281,20 @@
                                 <div class="row mx-auto">
                                     <div class="col-lg-6">
                                         <ul>
-                                            <li class="mb-3"><a href="#">1. 과학관련API</a></li>
-                                            <li class="mb-3"><a href="#">2. dfdf</a></li>
-                                            <li class="mb-3"><a href="#">3. asdfsadf</a></li>
-                                            <li class="mb-3"><a href="#">4. asdfsadf</a></li>
-                                            <li class="mb-3"><a href="#">5. asdfsadf</a></li>
+                                            <li class="mb-3 mt-3 ellipsis"><a href="#">1. 과학관련API</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">2. dfdf</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">3. asdfsadf</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">4. asdfsadf</a></li>
+                                            <li class="ellipsis"><a href="#">5. asdfsadf</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul>
-                                            <li class="mb-3"><a href="#">6. asdfsadf</a></li>
-                                            <li class="mb-3"><a href="#">7. asdfsadf</a></li>
-                                            <li class="mb-3"><a href="#">8. asdfsadf</a></li>
-                                            <li class="mb-3"><a href="#">9. asdfsadf</a></li>
-                                            <li class=""><a href="#">10. asdfsadf</a></li>
+                                            <li class="mb-3 mt-3 ellipsis"><a href="#">6. asdfsadf</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">7. asdfsadf</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">8. asdfsadf</a></li>
+                                            <li class="mb-3 ellipsis"><a href="#">9. asdfsadf</a></li>
+                                            <li class="ellipsis"><a href="#">10. asdfsadf</a></li>
                                         </ul>
                                     </div>
                                 </div>
