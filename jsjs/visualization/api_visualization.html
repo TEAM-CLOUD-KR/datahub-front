@@ -95,28 +95,21 @@
                         <div class="col-4">
                             <canvas id="myChart03"></canvas>
                             <script>
-                                mixed_chart(
+                                //https://www.chartjs.org/docs/latest/samples/line/stepped.html
+                                stepped_line(
                                     document.getElementById("myChart03"),
+                                    ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
                                     [
-                                        'January',
-                                        'February',
-                                        'March',
-                                        'April'
-                                    ],
-                                    [{
-                                        type: 'bar',
-                                        label: 'Bar Dataset',
-                                        data: [10, 20, 30, 40],
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        backgroundColor: 'rgba(255, 99, 132, 0.2)'
-                                    }, {
-                                        type: 'line',
-                                        label: 'Line Dataset',
-                                        data: [50, 50, 50, 50],
-                                        fill: false,
-                                        borderColor: 'rgb(54, 162, 235)'
-                                    }]
-                                );
+                                        {
+                                            label: 'Dataset',
+                                            data: [1, 2, 3, 4, 5, 6],
+                                            borderColor: 'rgb(255, 99, 132)',
+                                            fill: false,
+                                            stepped: true,
+                                        }
+                                    ]
+                                )
+
                             </script>
                         </div>
 
