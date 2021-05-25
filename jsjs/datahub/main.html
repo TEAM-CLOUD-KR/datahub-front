@@ -23,6 +23,11 @@
             text-decoration: none;
             color: black;
         }
+
+        .a-link {
+            font-weight: bold;
+            color: black !important;
+        }
     </style>
 </head>
 <body>
@@ -81,10 +86,35 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="#">Datahub01</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="#">Datahub02</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="#">Datahub03</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="#">Datahub04</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row mt-3">
                 <div class="col-12 col-lg-4">
-
-
                     <div class="card border-black mb-3 mt-3">
                         <div class="card-body text-dark">
                             <h5 class="card-title text-center">데이터허브 사용리스트</h5>
@@ -123,101 +153,50 @@
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="card border-black mb-3 mt-3">
-                        <div class="card-body text-dark p-0">
-                            <ul class="nav nav-pills mb-3 mt-3 justify-content-center" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" data-bs-toggle="pill"
-                                            data-bs-target="#tab01" type="button" role="tab"
-                                            aria-selected="true"><i class="fas fa-school fa-2x"></i><br>교육
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill"
-                                            data-bs-target="#tab02" type="button" role="tab"
-                                            aria-selected="false"><i class="fas fa-industry fa-2x"></i><br>산업
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill"
-                                            data-bs-target="#tab03" type="button" role="tab"
-                                            aria-selected="false"><i class="fas fa-hands-helping fa-2x"></i><br>공공
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill"
-                                            data-bs-target="#tab04" type="button" role="tab"
-                                            aria-selected="false"><i class="fas fa-medkit fa-2x"></i><br>의료
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill"
-                                            data-bs-target="#tab05" type="button" role="tab"
-                                            aria-selected="false"><i class="fas fa-plane-departure fa-2x"></i><br>항공
-                                    </button>
-                                </li>
-                                <!--                        <li class="nav-item" role="presentation">-->
-                                <!--                            <button class="nav-link" data-bs-toggle="pill"-->
-                                <!--                                    data-bs-target="#tab06" type="button" role="tab"-->
-                                <!--                                    aria-selected="false"><i class="fas fa-car-side fa-2x"></i><br>차량-->
-                                <!--                            </button>-->
-                                <!--                        </li>-->
-                                <!--                        <li class="nav-item" role="presentation">-->
-                                <!--                            <button class="nav-link" data-bs-toggle="pill"-->
-                                <!--                                    data-bs-target="#tab07" type="button" role="tab"-->
-                                <!--                                    aria-selected="false"><i class="fas fa-leaf fa-2x"></i><br>환경-->
-                                <!--                            </button>-->
-                                <!--                        </li>-->
-                                <!--                        <li class="nav-item" role="presentation">-->
-                                <!--                            <button class="nav-link" data-bs-toggle="pill"-->
-                                <!--                                    data-bs-target="#tab08" type="button" role="tab"-->
-                                <!--                                    aria-selected="false"><i class="fas fa-flask fa-2x"></i><br>과학-->
-                                <!--                            </button>-->
-                                <!--                        </li>-->
-                                <!--                        <li class="nav-item" role="presentation">-->
-                                <!--                            <button class="nav-link" data-bs-toggle="pill"-->
-                                <!--                                    data-bs-target="#tab09" type="button" role="tab"-->
-                                <!--                                    aria-selected="false"><i class="fas fa-gavel fa-2x"></i><br>법률-->
-                                <!--                            </button>-->
-                                <!--                        </li>-->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card border-black mb-3" >
                         <div class="card-body text-dark">
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="tab01" role="tabpanel">
-                                    01
+                            <h5 class="card-title text-center">데이터허브 사용리스트</h5>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">01</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">02</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">03</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">04</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">05</span> 과학관련API</a></li>
+                                    </ul>
                                 </div>
-                                <div class="tab-pane fade" id="tab02" role="tabpanel">...2
-                                </div>
-                                <div class="tab-pane fade" id="tab03" role="tabpanel">...3
-                                </div>
-                                <div class="tab-pane fade" id="tab04" role="tabpanel">...4
-                                </div>
-                                <div class="tab-pane fade" id="tab05" role="tabpanel">...5
-                                </div>
-                                <div class="tab-pane fade" id="tab06" role="tabpanel">...6
-                                </div>
-                                <div class="tab-pane fade" id="tab07" role="tabpanel">...7
-                                </div>
-                                <div class="tab-pane fade" id="tab08" role="tabpanel">...8
-                                </div>
-                                <div class="tab-pane fade" id="tab09" role="tabpanel">...9
+                                <div class="col-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">06</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">07</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">08</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">09</span> 과학관련API</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-truncate"><span
+                                                class="badge bg-primary rounded-pill">10</span> 과학관련API</a></li>
+                                    </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="col-12 col-lg-4">
-
-
                     <div id="carouselExampleCaptions" class="carousel slide mt-3" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -242,11 +221,13 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -256,6 +237,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </body>
