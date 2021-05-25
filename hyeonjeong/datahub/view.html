@@ -25,6 +25,10 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
 
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+
     <style>
         ol,
         ul,
@@ -48,107 +52,139 @@
     <div th:replace="fragments/header.html :: fragment-header"></div>
     <div class="container">
         <div class="row">
-            <div class="col-10 mx-auto">
+            <div class="col-12 col-lg-10 mx-auto">
                 <!-- datahub-view-page-big-title -->
                 <h2 class="mb-3">데이터 허브 상세 조회</h2>
 
-
                 <!-- datahub-view-page-card-API-contents -->
-                <h4 class="mb-3">관련 API 목록</h4>
+                <h4 class="mb-2">관련 API 목록</h4>
                 <div class="row mx-auto d-flex justify-content-between">
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">API 제목</div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">API 제목</div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">API 제목</div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">API 내용</p>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">API 내용</p>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-3 border m-1">
+                        <div class="card-header">API 제목
+                            <a href=""><span class="badge bg-dark float-end m-1">자세히</span></a>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">API 내용</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- datahub-view-page-card-API-specialcard -->
+            <div class="col-12 mx-auto p-4">
                 <div class="row mx-auto d-flex justify-content-between">
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
+                    <div class="card col-12 col-lg-2 border border-dark m-1">
                         <div class="card-header">API 제목</div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
+                    <div class="card col-12 col-lg-2 border border-dark m-1">
                         <div class="card-header">API 제목</div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
+                    <div class="card col-12 col-lg-2 border border-dark m-1">
                         <div class="card-header">API 제목</div>
                         <div class="card-body text-dark">
                             <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-2 border border-dark m-1">
+                        <div class="card-header">API 제목</div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">API 내용</p>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-2 border border-dark m-1">
+                        <div class="card-header">API 제목</div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">API 내용</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-
-
+            <div class="col-12 col-lg-10 mx-auto">
                 <!-- datahub-view-page-card-dataset-contents -->
-                <h4 class="mb-3 mt-5">관련 데이터셋 목록</h4>
+                <h4 class="mb-2 mt-3">관련 데이터셋 목록</h4>
                 <div class="row mx-auto d-flex justify-content-between">
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">데이터셋 이름</div>
-                        <div class="card-body text-dark">
+                    <div class="card col-12 col-lg-5 border mb-3 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">데이터셋 이름</h5>
                             <p class="card-text">데이터셋 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">API 제목</div>
-                        <div class="card-body text-dark">
-                            <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
+                    <div class="card col-12 col-lg-5 border mb-3 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">데이터셋 이름</h5>
+                            <p class="card-text">데이터셋 내용</p>
                         </div>
                     </div>
-                    <div class="card border border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">API 제목</div>
-                        <div class="card-body text-dark">
-                            <p class="card-text">API 내용</p>
-                            <span class="badge bg-dark">과학기술</span>
-                            <span class="badge bg-dark">ㄱㄱㄱ</span>
+                    <div class="card col-12 col-lg-5 border mb-3 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">데이터셋 이름</h5>
+                            <p class="card-text">데이터셋 내용</p>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-lg-5 border mb-3 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">데이터셋 이름</h5>
+                            <p class="card-text">데이터셋 내용</p>
                         </div>
                     </div>
                 </div>
-
-                
-            <!--글씨 쓰기 필요없음 
-                api나 데이터셋 목록
-                그리드, 배너로
-                리스트형식으로 하지말기
-                데이터 허브를 누가 등록? 사용자? 관리자?
-            데이터 허브 메인에서 마음에 드는 데이터 허브 하나를 클릭했을 때 그 데이터 허브 관련된 API나 데이터셋을 보여주는 페이지-->
+            </div>
         </div>
-    </div>
     </div>
 </body>
 
 </html>
+<!--글씨 쓰기 필요없음 
+                api나 데이터셋 목록
+                그리드, 배너로
+                리스트형식으로 하지말기
+                데이터 허브를 누가 등록? 사용자? 관리자?
+            데이터 허브 메인에서 마음에 드는 데이터 허브 하나를 클릭했을 때 그 데이터 허브 관련된 API나 데이터셋을 보여주는 페이지
+            데이터 허브에서만 공개된 API가 있는데 이 페이지에서 그 공개된 API가 나와야 함-->
